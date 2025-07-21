@@ -1,0 +1,175 @@
+/* .extendedHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.leftWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.shutdownMessage {
+    
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.shutdownText {
+    color: rgba(255, 255, 255, 0.50);
+    font-family: "MD IO Trial";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 226px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.timerWrapper {
+    width: 226px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.backButtonWrapper {
+    display: flex;
+    width: 60px;
+    height: 28px;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.logoWrapper {
+    width: 114.065px;
+    height: 32.626px;
+    flex-shrink: 0;
+    margin-left: 3px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.logoImage {
+    width: 100%;
+    height: 100%;
+}
+
+.rightWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.homeButtonWrapper {
+    width: 72px;
+    height: 24px;
+}
+
+.aboutButtonWrapper {
+    width: 84px;
+    height: 24px;
+} */
+ /* .extendedHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 34px 28px 0;
+    box-sizing: border-box;
+} */
+ .extendedHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 34px 28px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.leftWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.shutdownMessage {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.shutdownText {
+    color: rgba(255, 255, 255, 0.50);
+    font-family: "MD IO Trial";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.timerWrapper {
+    height: 22px;
+}
+
+.backButtonWrapper {
+    margin-top: 20px;
+    margin-left: -3px;
+}
+
+.logoWrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.trademark {
+    position: absolute;
+    top:0;
+    margin-top: 2px;
+    left : 117px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 5.607px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.056px;
+    text-transform: uppercase;
+}
+
+.logoImage {
+    width: 114.065px;
+    height: 32.626px;
+}
+
+.rightWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.homeButtonWrapper {
+    width: 72px;
+    height: 24px;
+}
+
+.aboutButtonWrapper {
+    width: 84px;
+    height: 24px;
+}

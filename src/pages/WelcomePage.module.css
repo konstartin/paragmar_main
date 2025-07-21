@@ -1,0 +1,154 @@
+/* pages/WelcomePage.module.css */
+
+/* Base container for the full screen loader */
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* A new container for the whole composition to handle positioning */
+.compositionContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This container holds the SVG characters and lays them out in a row */
+/* It replaces the old .iconsContainer for better clarity */
+.mainTextContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 8px; 
+}
+
+/* --- KEPT FROM PREVIOUS VERSION (AS YOU REQUESTED) --- */
+/* Individual styles for each SVG "icon" or character */
+.firstIcon {
+  width: 31.599px;
+  height: 95.762px;
+  flex-shrink: 0;
+}
+
+.secIcon {
+  width: 51.416px;
+  height: 94.982px;
+  flex-shrink: 0;
+}
+
+.thirdIcon {
+  width: 51.309px;
+  height: 96.982px;
+  flex-shrink: 0;
+}
+
+.fourthIcon {
+  width: 45.599px;
+  height: 95.762px;
+  flex-shrink: 0;
+}
+
+.fifthIcon {
+  width: 51.416px;
+  height: 94.982px;
+  flex-shrink: 0;
+}
+
+.sixthIcon {
+  width: 41.776px;
+  height: 94.982px;
+  flex-shrink: 0;
+}
+
+.progressNumber {
+  position: relative;
+  top: 1.5px; 
+}
+
+.progressText {
+  position: absolute;
+  bottom: -29px;
+  right: 0;
+  color: #FFF;
+  font-family: 'MD IO Trial';
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: right;
+  width: 54px; 
+}
+
+.trademark {
+  position: relative;
+  top: 0;
+  right: -10px;
+  color: #FFF;
+  font-family: 'Helvetica';
+  font-size: 16.458px;
+  font-weight: 100;
+  letter-spacing: 0.165px;
+  text-transform: uppercase;
+  height: 79px;
+
+}
+
+.typingContainer {
+
+  display: flex;
+  width: 1920px;
+  height: 1080px;
+  padding: 447px 0px 524px 0px;
+  justify-content: center;
+  align-items: center;
+} 
+
+.typingText {
+  color: #FFF;
+  font-family: "MD IO Trial";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.buttonContainer {
+  margin-top: 150px;
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+/* Styles for the new text elements, positioned absolutely */
+.loadingText {
+  position: absolute;
+  bottom: -34px;
+  left: 0;
+  color: #FFF;
+  font-family: 'MD IO Trial';
+  font-size: 20x;
+  text-transform: uppercase;
+  
+}
+
+.headphonesIcon {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  margin-bottom: 2rem; /* Adds some space between the icon and the text below it */
+}

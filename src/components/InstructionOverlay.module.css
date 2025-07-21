@@ -1,0 +1,53 @@
+.centerOverlay {
+  position: absolute;
+  top: 134px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progressText {
+  color: #FFF;
+  text-align: center;
+  font-family: "MD IO Trial";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.progressLine {
+  display: block;
+}
+
+.instructionContainer {
+  display: flex;
+  width: 631px;
+  height: 49px;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "MD IO Trial";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.boldText {
+  font-weight: 600;
+}

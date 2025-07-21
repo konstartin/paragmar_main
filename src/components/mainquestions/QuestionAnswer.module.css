@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  width: 417px;
+  padding: 16px 23px 23px 23px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  background: transparent;
+}
+
+.index {
+  width: 49px;
+  color: #FFF;
+  font-family: "MD IO Trial";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.answer {
+  width: 233px;
+  color: #FFF;
+  text-align: right;
+  font-family: "MD IO Trial";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}

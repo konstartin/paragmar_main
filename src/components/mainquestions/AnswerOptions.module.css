@@ -1,0 +1,62 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.questionsWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.leftColumn {
+  top: 380px;
+  left: 100px;
+}
+
+.rightColumn {
+  top: 380px;
+  right: 100px;
+}
+
+.option {
+  background: none;
+  border: none;
+  pointer-events: auto;
+  color: #fff;
+  text-align: center;
+  font-family: 'Test Söhne Schmal';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.questionsWrapper:has(.option:hover) .option:not(:hover) {
+  filter: blur(5px);
+  opacity: 0.6;
+}
+
+.divider {
+  width: 245px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}   
+

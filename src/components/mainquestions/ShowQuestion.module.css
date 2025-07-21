@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  width: 631px;
+  height: 49px;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.container h2 {
+  /* You can add specific text styles here */
+  /* For example: */
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}

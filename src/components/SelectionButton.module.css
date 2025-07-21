@@ -1,0 +1,26 @@
+/* components/SelectionButton.module.css */
+
+.startButton {
+    width: 310px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    /* background: rgba(0, 0, 0, 0.10); */
+    background: transparent;
+    /* We remove default browser styles for the button */
+    padding: 0;
+    cursor: pointer;
+}
+  
+.buttonText {
+    color: #FFF;
+    text-align: center;
+    font-family: "MD IO Trial", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 125% */
+    text-transform: uppercase;
+}
+  

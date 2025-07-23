@@ -13,3 +13,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 https://github.com/konstartin/paragmar_main.git
+https://paragmar-main.vercel.app

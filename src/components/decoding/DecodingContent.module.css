@@ -4,22 +4,34 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 0 80px;
 }
 
-.leftSection,
-.rightSection {
+.leftSection {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    justify-self: start;
+}
+
+.centerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
 }
 
 .rightSection {
+    display: flex;
+    flex-direction: column;
     align-items: flex-end;
+    gap: 8px;
+    justify-self: end;
 }
 
 .leftNumber,
@@ -42,104 +54,6 @@
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
-}
-
-.rightCategory {
-    text-align: right;
-}
-
-.centerSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-}
-
-.titleContainer {
-    margin-bottom: 40px;
-}
-
-.title {
-    color: #FFF;
-    text-align: center;
-    font-family: "Test Söhne Schmal";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.1;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-
-.description {
-    color: rgba(255, 255, 255, 0.50);
-    text-align: center;
-    font-family: "MD IO Trial";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.3;
-    text-transform: uppercase;
-    max-width: 300px;
-}
-
-.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 80px;
-}
-
-.leftSection,
-.rightSection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.rightSection {
-    align-items: flex-end;
-}
-
-.leftNumber,
-.rightNumber {
-    color: #FFF;
-    font-family: "MD IO Trial";
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-.leftCategory,
-.rightCategory {
-    color: #FFF;
-    font-family: "MD IO Trial";
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-.rightCategory {
-    text-align: right;
-}
-
-.centerSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
 }
 
 .titleContainer {

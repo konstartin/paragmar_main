@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useQuiz } from '@/context/QuizContext';
 import styles from './CountdownTimer.module.css';
 
 export default function CountdownTimer() {
-    const ninetySeconds = 3 * 60 * 1000;
+    const ninetySeconds = 0.5 * 60 * 1000;
     const [timeLeft, setTimeLeft] = useState(ninetySeconds);
+    const { resetQuiz } = useQuiz();
     const navigate = useNavigate();
 
     useEffect(() => {
         if (timeLeft <= 0) {
+            resetQuiz();
             navigate('/');
             return;
         }

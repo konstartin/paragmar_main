@@ -13,6 +13,26 @@
   height: 100%;
   z-index: 2;
   pointer-events: none;
+  color: #FFF;
+  text-align: center;
+  font-family: "Test Söhne Schmal";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.modelWrapper {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1300px;
+  height: 1300px;
+  z-index: 1;
+  pointer-events: none;
+
 }
 
 .column {
@@ -38,7 +58,7 @@
   pointer-events: auto;
   color: #fff;
   text-align: center;
-  font-family: 'Test Söhne Schmal';
+  font-family: 'Test Sohne Schmal';
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -56,7 +76,6 @@
 .divider {
   width: 245px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 1);
   margin: 20px 0;
-}   
-
+}

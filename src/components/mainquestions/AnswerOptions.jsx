@@ -25,14 +25,14 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
       <div className={`${styles.column} ${className}`}>
         <button
           className={`${styles.option} ${selected === top.value ? styles.selected : ''}`}
-          onClick={() => handleSelect(top.value)}
+          onClick={() => handleSelect(top)}
         >
           {top.label}
         </button>
         <img src={layerSvg} className={styles.divider} alt="Divider" />
         <button
           className={`${styles.option} ${selected === bottom.value ? styles.selected : ''}`}
-          onClick={() => handleSelect(bottom.value)}
+          onClick={() => handleSelect(bottom)}
         >
           {bottom.label}
         </button>

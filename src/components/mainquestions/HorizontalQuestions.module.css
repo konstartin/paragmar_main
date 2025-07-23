@@ -1,0 +1,99 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.questionText {
+  color: #FFF;
+  text-align: center;
+  font-family: "Test Söhne Schmal";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+  pointer-events: none;
+}
+
+.progress span {
+  color: #FFF;
+  font-family: "Test Söhne Schmal";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.line {
+  width: 120px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  pointer-events: auto;
+}
+
+.divider {
+  height: auto;
+  width: auto;
+  margin: 0 15px;
+}
+
+.option {
+  display: flex;
+  width: 400px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  text-align: center;
+  font-family: "Test Söhne Schmal";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.options:has(.option:hover) .option:not(:hover) {
+  filter: blur(5px);
+  opacity: 0.6;
+}
+
+.option.selected {
+  filter: brightness(1.3);
+}
+
+.option.disabled {
+  filter: blur(5px);
+  opacity: 0.6;
+  cursor: default;
+}

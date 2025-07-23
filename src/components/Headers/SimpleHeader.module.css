@@ -5,13 +5,18 @@
     width: 100%;
 }
 
+.logoWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px; 
+  width: 314.065px;
+  height: 32.626px;
+  
+}
+
 .trademark {
-    position: absolute;
-    top:0;
-    margin-top: 18px;
-    left : 322px;
-    flex-shrink: 0;
     color: #FFF;
+    text-align: right;
     font-family: Helvetica;
     font-size: 5.607px;
     font-style: normal;
@@ -19,6 +24,7 @@
     line-height: normal;
     letter-spacing: 0.056px;
     text-transform: uppercase;
+    transform: translate(-75px,3px);
 }
 
 .backButtonWrapper {
@@ -30,24 +36,9 @@
     flex-shrink: 0;
 }
 
-.logoWrapper {
-    margin-left: 30px;
-    width: 314.065px;
-    height: 32.626px;
-    flex-shrink: 0;
-}
-
 .logoImage {
     width: 100%;
     height: 100%;
+    transform: translateX(20px);
 }
 
-.soundButtonWrapper {
-    display: flex;
-    width: 80.842px;
-    height: 24.629px;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 16px;
-    flex-shrink: 0;
-}

@@ -5,76 +5,39 @@
  * Each key is a question ID, and the value is the configuration object for displaying the scene.
  * URLs now point to local files in the `/public` directory.
  */
+import scene3 from '@/assets/3dobjects/scene2.splinecode?url';
+import scene2 from '@/assets/3dobjects/scene3.splinecode?url';
+import scene4 from '@/assets/3dobjects/scene4.splinecode?url';
+import scene5 from '@/assets/3dobjects/scene5.splinecode?url';
+import scene6 from '@/assets/3dobjects/scene6.splinecode?url';
+import scene7 from '@/assets/3dobjects/scene7.splinecode?url';
+import scene8 from '@/assets/3dobjects/scene8.splinecode?url';
+import scene9 from '@/assets/3dobjects/scene9.splinecode?url';
+
 export const SPLINE_CONFIGS = {
     2: {
-        url: '/src/assets/3dobjects/scene.splinecode',
-        width: 1300,
-        height: 1300,
-        top: '55%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        scale: 1.0,
-        zIndex: 1
+        url: scene2,
     },
     3: {
-        url: 'https://prod.spline.design/ITbmF6KaYORWAdIm/scene.splinecode',
-        width: 1300,
-        height: 1300,
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        scale: 1.0,
-        zIndex: 1
+        url: scene3,
     },
     4: {
-        url: 'https://prod.spline.design/hR7WjXazDNrT75SZ/scene.splinecode',
-        width: 1300,
-        height: 1300,
-        top: '70%',
-        left: '29%',
-        transform: 'translate(-50%, -50%)',
-        scale: 1.0,
-        zIndex: 1
+        url: scene4,
     },
     5: {
-        url: 'https://prod.spline.design/2bV-VFQJBFTLN-o7/scene.splinecode',
-        width: 1300,
-        height: 1300,
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        scale: 1.0,
-        zIndex: 1
+        url: scene5,
     },
     6: {
-        url: 'https://prod.spline.design/clLvbdsF4aYGQrsX/scene.splinecode',
-        width: 1300,
-        height: 1300,
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        scale: 1.0,
-        zIndex: 1
+        url: scene6,
     },
     7: {
-        url: 'https://prod.spline.design/poI0QhuFsCmfWBwc/scene.splinecode',
-        width: 1300,
-        height: 1300,
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        scale: 1.0,
-        zIndex: 1
+        url: scene7,
     },
     8: {
-        url: 'https://my.spline.design/untitled-RRjsge7OyGalw21YxWtwz3ax/',
-        width: 1300,
-        height: 1300,
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        scale: 1.0,
-        zIndex: 1
+        url: scene8,
+    },
+    9: {
+        url: scene9,
     },
 };
 

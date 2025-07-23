@@ -10,35 +10,34 @@ import InstructionOverlay from '../components/InstructionOverlay';
 
 export default function BackgroundSelectionPage() {
     const navigate = useNavigate();
-    const { selectBackground, next  } = useQuiz();
-
-    const handleSelection = (backgroundId) => {
-        selectBackground(backgroundId);
-        next()
-        navigate('/question/2');
+    const { selectBackground, next, saveAnswer } = useQuiz();
+    const handleSelection = (backgroundId, backgroundLabel) => {    
+    const cleanLabel = backgroundLabel.replace('STEP INTO ', '');
+    saveAnswer(0, { label: cleanLabel });
+    selectBackground(backgroundId);
+    next();
+    navigate('/question/2');
     };
 
     return (
         <div className={styles.pageContainer}>
             <InstructionOverlay
-              currentStep={1}
-              line1="click to choose"
-              line2="your environment"
+                currentStep={1}
+                line1="click to choose"
+                line2="your environment"
             />
-
             {Object.entries(backgroundConfig).map(([id, config]) => (
                 <div
                     key={id}
-                    className={`${styles.backgroundOption} ${id}`}
+                    className={`${styles.backgroundOption} ${styles[id]}`}
                 >
                     <div className={styles.headerPlacement}>
                         <SimpleHeader />
                     </div>
-                    
                     <div className={styles.buttonPlacement}>
                         <SelectionButton
                             text={config.label}
-                            onClick={() => handleSelection(id)}
+                            onClick={() => handleSelection(id, config.label)}
                         />
                     </div>
                 </div>

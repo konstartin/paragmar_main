@@ -1,25 +1,40 @@
 .pageContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow: hidden;
-    position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .backgroundOption {
-    flex: 1;
-    border: none;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-    padding: 1rem;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: flex 800ms ease-in-out, opacity 400ms ease-in-out;
 }
 
+.headerPlacement {
+  display: flex;
+  justify-content: center; 
+  padding: 6px; 
+}
+
+
+
 .buttonPlacement {
-    position: absolute;
-    bottom: 23px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 310px;
+  display: flex;
+  justify-content: center; 
+  padding-bottom: 25px; 
+}
+
+.desert {
+  background: url('../assets/questions/desert.jpg') no-repeat center center / cover;
+}
+
+.lake {
+  background: url('../assets/questions/lake.jpg') no-repeat center center / cover;
+}
+
+.snow {
+  background: url('../assets/questions/snow.jpg') no-repeat center center / cover;
 }

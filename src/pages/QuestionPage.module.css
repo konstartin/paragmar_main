@@ -1,18 +1,4 @@
-/* .pageContainer {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-}
 
-.headerPlacement {
-    padding: 1rem;
-}
-
-.questionContainer{
-margin-top: 500px;    
-} */
 .pageContainer {
   position: absolute;
   width: 100%;
@@ -23,6 +9,12 @@ margin-top: 500px;
 }
 
 .headerPlacement {
-  position: relative;
+  transform: translateY(-10px);
   z-index: 10;
+}
+.sidebarPlacement {
+  position: absolute;
+  bottom: 0px; 
+  left: 0px;   
+  z-index: 50;  
 }

@@ -1,0 +1,37 @@
+
+.pageContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.bgLayer {
+  position: fixed;     
+  inset: 0;
+  background-size: cover;   
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none; 
+}
+.headerArea {
+
+}
+
+.infoArea {
+
+}
+
+.viewerArea {
+    position: absolute;
+    width: 890.974px;
+    height: 952px;
+    transform: translate(36%, -5%);
+}
+
+.actionsArea {
+
+}

@@ -7,7 +7,7 @@ import NavButton from './buttons/NavButton';
 import logoSrc from '@/assets/questions/questionLogo.svg';
 import CountdownTimer from './CountdownTimer';
 
-export default function ExtendedHeader({ currentQuestionId }) {
+export default function ExtendedHeader({ currentQuestionId, backPath }) {
     return (
         <div className={styles.extendedHeaderContainer}>
             <div className={styles.leftWrapper}>
@@ -20,7 +20,7 @@ export default function ExtendedHeader({ currentQuestionId }) {
                     </div>
                 </div>
                 <div className={styles.backButtonWrapper}>
-                    <BackButton currentQuestionId={currentQuestionId} />
+                    <BackButton path={backPath} />
                 </div>
             </div>
             <div className={styles.logoWrapper}>

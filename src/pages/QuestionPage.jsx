@@ -11,8 +11,8 @@ import styles from './QuestionPage.module.css';
 
 export default function QuestionPage() {
   const { id } = useParams();
-  const indexFromUrl = Number(id) - 1;
-
+  const indexFromUrl = Number(id);
+  
   const { selectedBackground, saveAnswer } = useQuiz();
   const navigate = useNavigate();
 
@@ -24,9 +24,10 @@ export default function QuestionPage() {
 
   const handleAnswerSelect = (questionIndex, answer) => {
     saveAnswer(questionIndex, answer);
+
     const nextQuestionId = Number(id) + 1;
 
-    if (nextQuestionId > 12) {
+    if (nextQuestionId > 11) {
       navigate('/decoding');
     } else {
       navigate(`/question/${nextQuestionId}`);
@@ -75,7 +76,10 @@ export default function QuestionPage() {
   return (
     <div className={`${styles.pageContainer} ${selectedBackground}`}>
       <div className={styles.headerPlacement}>
-        <ExtendedHeader currentQuestionId={Number(id)} />
+        <ExtendedHeader 
+          currentQuestionId={Number(id)} 
+          backPath={`/question/${Number(id) - 1}`} 
+        />
       </div>
       <div className={styles.titlePlacement}>
         <InstructionOverlay

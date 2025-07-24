@@ -88,7 +88,7 @@ export default function WelcomePage() {
     }, []);
 
     const progress = useProgressAnimation({
-        duration: 4000,
+        duration: 3000,
         onComplete: handleProgressComplete,
     });
     

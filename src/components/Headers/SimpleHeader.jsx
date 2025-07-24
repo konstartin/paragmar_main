@@ -4,11 +4,11 @@ import BackButton from './buttons/BackButton';
 import SoundButton from './buttons/SoundButton';
 import logoSrc from '../../assets/questions/questionLogo.svg';
 
-export default function SimpleHeader() {
+export default function SimpleHeader({ backPath }) {
     return (
         <div className={styles.simpleHeaderContainer}>
             <div className={styles.backButtonWrapper}>
-                <BackButton currentQuestionId={1} />
+                <BackButton path={backPath} />
             </div>
             <div className={styles.logoWrapper}>
                 <img src={logoSrc} alt="Logo" className={styles.logoImage} />

@@ -1,0 +1,23 @@
+.title {
+    color: #FFF;
+    text-align: center;
+    font-family: "MD IO Trial";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #FFF;
+    font-family: "MD IO Trial";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+      display: block;
+    max-width: 500px; 
+    margin: 0 auto;
+}

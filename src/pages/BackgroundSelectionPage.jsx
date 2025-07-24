@@ -13,7 +13,7 @@ export default function BackgroundSelectionPage() {
     const { selectBackground, next, saveAnswer } = useQuiz();
     const handleSelection = (backgroundId, backgroundLabel) => {    
     const cleanLabel = backgroundLabel.replace('STEP INTO ', '');
-    saveAnswer(0, { label: cleanLabel });
+    saveAnswer(1, { label: cleanLabel });
     selectBackground(backgroundId);
     next();
     navigate('/question/2');
@@ -32,7 +32,7 @@ export default function BackgroundSelectionPage() {
                     className={`${styles.backgroundOption} ${styles[id]}`}
                 >
                     <div className={styles.headerPlacement}>
-                        <SimpleHeader />
+                        <SimpleHeader  backPath="/" />
                     </div>
                     <div className={styles.buttonPlacement}>
                         <SelectionButton

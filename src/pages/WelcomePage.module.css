@@ -119,6 +119,7 @@
 
 .buttonContainer {
   margin-top: 150px;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 .pulse {
@@ -151,4 +152,14 @@
   flex-shrink: 0;
   aspect-ratio: 1/1;
   margin-bottom: 2rem; /* Adds some space between the icon and the text below it */
+  animation: fadeIn 1.5s ease-in forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

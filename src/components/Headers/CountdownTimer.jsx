@@ -4,7 +4,7 @@ import { useQuiz } from '@/context/QuizContext';
 import styles from './CountdownTimer.module.css';
 
 export default function CountdownTimer() {
-    const ninetySeconds = 0.5 * 60 * 1000;
+    const ninetySeconds = 3 * 60 * 1000;
     const [timeLeft, setTimeLeft] = useState(ninetySeconds);
     const { resetQuiz } = useQuiz();
     const navigate = useNavigate();
@@ -34,7 +34,6 @@ export default function CountdownTimer() {
 
         return `${paddedMinutes}:${paddedSeconds}.${paddedMilliseconds}`;
     };
-
     return (
         <div className={styles.timer}>
             <span>{formatTime(timeLeft)}</span>

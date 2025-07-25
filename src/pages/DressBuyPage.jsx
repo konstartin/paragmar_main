@@ -68,7 +68,7 @@ const DressBuyPage = () => {
       <div className={`${styles.bgLayer} ${selectedBackground}`} />
 
       <header className={styles.headerArea}>
-        {/* <ExtendHeader /> */}
+        <ExtendHeader />
       </header>
 
       <section className={styles.infoArea}>

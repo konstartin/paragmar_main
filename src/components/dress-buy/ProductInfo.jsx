@@ -1,17 +1,16 @@
-
 import React, { useState } from 'react';
 import styles from './ProductInfo.module.css';
 import { useQuiz } from '@/context/QuizContext';
 import AccordionItem from './AccordionItem';
 
-const ProductInfo = () => {
+const ProductInfo = ({ clothingName }) => { // Добавили пропс clothingName
     const { getProduct, viewMode, setViewMode } = useQuiz();
     const productData = getProduct() || { title: 'CHILDHOOD ECHO' };
 
     const [openSection, setOpenSection] = useState('description');
 
     const handleToggle = (sectionName) => {
-        setOpenSection(prevOpenSection => 
+        setOpenSection(prevOpenSection =>
             prevOpenSection === sectionName ? null : sectionName
         );
     };
@@ -22,16 +21,19 @@ const ProductInfo = () => {
 
     return (
         <div className={styles.infoContainer}>
-            <h1 className={styles.title}>{productData.title}</h1>
+            {/* ИЗМЕНИЛИ: используем clothingName вместо productData.title */}
+            <h1 className={styles.title}>
+                {clothingName || productData.title}
+            </h1>
 
             <div className={styles.viewButtons}>
-                <button 
+                <button
                     className={`${styles.button} ${viewMode !== 'animation' ? styles.inactive : ''}`}
                     onClick={() => setViewMode('animation')}
                 >
                     ANIMATION
                 </button>
-                <button 
+                <button
                     className={`${styles.button} ${viewMode !== '3d' ? styles.inactive : ''}`}
                     onClick={() => setViewMode('3d')}
                 >
@@ -40,19 +42,19 @@ const ProductInfo = () => {
             </div>
 
             <div className={styles.accordionContainer}>
-                <AccordionItem 
+                <AccordionItem
                     title="DESCRIPTION"
                     content={productData.description}
                     isOpen={openSection === 'description'}
                     onToggle={() => handleToggle('description')}
                 />
-                <AccordionItem 
+                <AccordionItem
                     title="FORMAT"
                     content={productData.format}
                     isOpen={openSection === 'format'}
                     onToggle={() => handleToggle('format')}
                 />
-                <AccordionItem 
+                <AccordionItem
                     title="TECHNICAL SPECS"
                     content={productData['technical specs']}
                     isOpen={openSection === 'technical-specs'}

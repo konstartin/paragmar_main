@@ -3,8 +3,8 @@ import styles from './ModelDescription.module.css';
 import { useQuiz } from '@/context/QuizContext';
 
 const ModelDescription = () => {
-  const { getproduct } = useQuiz();
-  const product = getproduct();
+  const { getProduct } = useQuiz();
+  const product = getProduct();
 
   return (
     <div>

@@ -1,0 +1,189 @@
+/* src/components/checkout/Checkout.module.css */
+
+.checkoutContainer {
+    width: 40%;
+    min-width: 300px;
+    height: 100vh;
+
+    padding: 2.5% 3%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: auto;
+    font-family: 'Test Söhne Schmal';
+    box-sizing: border-box;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+
+.title {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    text-transform: uppercase;
+    font-family: 'Test Söhne Schmal';
+}
+
+.closeBtn {
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+}
+
+.itemRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+    flex-shrink: 0;
+
+}
+
+.itemTitle {
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.itemPrice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2em;
+    text-align: right;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+    transform: translateY(0.1em);
+}
+
+.eth {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.usd {
+    font-size: 0.9em;
+    color: grey;
+    line-height: 1.2;
+}
+
+.separator {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    flex-shrink: 0;
+
+}
+
+.totalRow {
+    display: flex;
+    font-family: 'MD IO Trial';
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+
+}
+
+.totalLabel {
+    font-family: 'MD IO Trial';
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.paymentLabel {
+    font-size: 0.9em;
+    color: grey;
+    letter-spacing: 1px;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+    flex-shrink: 0;
+
+}
+
+.paymentOption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding: 1em 1.5em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    background-color: black;
+    transition: border 0.3s;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+    flex-shrink: 0;
+
+}
+
+.selected {
+    border-color: white;
+}
+
+.cardIcons {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.cardIcons img {
+    width: 24px;
+    height: 24px;
+}
+
+.metamaskIcon {
+    width: 28px;
+    height: 28px;
+}
+
+.paymentText {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 1em;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+}
+
+.radioOuter {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radioInner {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    transition: opacity 0.2s;
+}

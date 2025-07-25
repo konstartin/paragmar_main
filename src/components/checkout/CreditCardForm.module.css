@@ -1,0 +1,157 @@
+/* CreditCardForm.module.css */
+
+.cardFormWrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Test Söhne Schmal";
+    position: relative;
+    flex: 1;
+}
+
+/* Payment Method label */
+.paymentMethodLabel {
+    font-size: 0.9em;
+    color: grey;
+    letter-spacing: 1px;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+}
+
+/* Header with method selection and change button */
+.methodHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.methodInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.visaIcon {
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.methodText {
+    font-family: 'MD IO Trial';
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.changeButton {
+    background: none;
+    border: none;
+    color: #666;
+    font-family: 'MD IO Trial';
+    font-size: 0.9em;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.changeButton:hover {
+    color: white;
+}
+
+/* Card form container */
+.cardFormContainer {
+    padding: 30px 25px;
+    background-color: #0f0f0f;
+    border-radius: 27px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.inlineLabel {
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    font-size: 0.7em;
+    color: #666;
+    font-family: 'MD IO Trial';
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.inputField {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1.1em;
+    font-family: 'MD IO Trial';
+    font-weight: 500;
+    padding: 28px 18px 12px 18px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.inputField:focus {
+    background-color: #252525;
+}
+
+
+.payButton {
+    margin-top: auto;
+
+    margin-bottom: 30px;
+    margin-left: auto;
+
+    margin-right: auto;
+
+    width: 200px;
+
+    display: block;
+
+    font-family: 'MD IO Trial';
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background: none;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.payButton:hover {
+    background: white;
+    color: black;
+}

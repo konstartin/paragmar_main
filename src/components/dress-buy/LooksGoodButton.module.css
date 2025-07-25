@@ -1,0 +1,21 @@
+/* LooksGoodButton.module.css */
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.buttonSvg {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 48px;
+    
+    width: auto;
+}
+
+.buttonSvg:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}

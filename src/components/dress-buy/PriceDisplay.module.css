@@ -1,0 +1,54 @@
+/* PriceDisplay.module.css */
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.priceSection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: white;
+    font-family: 'MD IO Trial', sans-serif;
+}
+
+.usdPrice {
+    color: white;
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+.separator {
+    color: white;
+    font-size: 32px;
+
+    margin: 0 2px;
+
+}
+
+.ethPrice {
+    color: white;
+    font-size: 32px;
+
+    font-weight: 600;
+}
+
+.diamondSvg {
+    height: 24px;
+
+    width: auto;
+    margin-left: 8px;
+
+}
+
+.separatorLine {
+    height: 50px;
+
+    width: auto;
+    opacity: 0.7;
+}

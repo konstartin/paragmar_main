@@ -17,11 +17,22 @@
 }
 
 .headerArea {
-  /* Keep existing styles */
+  /* Keep existing styles - НЕ исчезает */
 }
 
 .infoArea {
   /* Keep existing styles */
+}
+
+/* Wrapper только для ProductInfo */
+.productInfoWrapper {
+  transition: opacity 0.5s ease-out;
+}
+
+/* Анимация исчезновения ТОЛЬКО ProductInfo */
+.productInfoWrapper.fadeOut {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .viewerArea {
@@ -29,39 +40,56 @@
   width: 890.974px;
   height: 952px;
   transform: translate(36%, -5%);
+  transition: transform 0.5s ease-out;
+}
+
+/* Анимация сдвига 3D модели влево */
+.viewerArea.slideLeft {
+  transform: translate(10%, -5%);
 }
 
 .actionsArea {
   position: relative;
-  /* Keep existing styles */
+  /* Keep existing styles - НЕ исчезает */
 }
 
 .looksGoodContainer {
   position: fixed;
   top: 95%;
-  left: 96%;
+  left: 90%;
   transform: translate(-100%, -100%);
   z-index: 10;
   display: flex;
   align-items: center;
   gap: 20px;
+  transition: opacity 0.5s ease-out;
+  /* Добавили анимацию исчезновения */
 }
 
-/* Checkout modal overlay */
-.checkoutOverlay {
+/* Анимация исчезновения цены и кнопок */
+.looksGoodContainer.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Checkout container - 40% от экрана */
+.checkoutContainer {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent backdrop */
-  display: flex;
-  justify-content: flex-end;
-  /* Align checkout to right side */
-  align-items: center;
+  right: 0;
+  width: 40%;
+  height: 100vh;
   z-index: 1000;
-  /* High z-index to appear above everything */
-  padding-right: 20px;
-  /* Some padding from edge */
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+/* Анимация появления checkout справа */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }

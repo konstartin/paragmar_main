@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './Checkout.module.css';
 
 import metamaskIcon from '../../assets/icons/metamask.png';
+import visaIcon from '../../assets/icons/visa.png'; // Добавляем импорт
+import mastercardIcon from '../../assets/icons/mastercard.png'; // Добавляем импорт
 import CreditCardForm from './CreditCardForm';
 import MetaMaskForm from './MetaMaskForm';
 
@@ -10,7 +12,7 @@ const Checkout = ({
     priceUSD = 38,
     priceCrypto = 0.014,
     cryptoSymbol = 'ETH',
-    onClose // New prop for closing the checkout
+    onClose
 }) => {
     const [selectedMethod, setSelectedMethod] = useState(null);
     const [isCardFormVisible, setIsCardFormVisible] = useState(false);
@@ -44,17 +46,15 @@ const Checkout = ({
 
     return (
         <div className={styles.checkoutContainer}>
+            {/* Кнопка ВСЕГДА видна в заголовке */}
             <div className={styles.header}>
                 <h1 className={styles.title}>CHECKOUT</h1>
-                {/* Show close button when not in forms */}
-                {!isMetaMaskFormVisible && !isCardFormVisible && (
-                    <button
-                        className={styles.closeBtn}
-                        onClick={handleClose}
-                    >
-                        [X]
-                    </button>
-                )}
+                <button
+                    className={styles.closeBtn}
+                    onClick={handleClose}
+                >
+                    [X]
+                </button>
             </div>
 
             <div className={styles.itemRow}>
@@ -98,7 +98,11 @@ const Checkout = ({
                         className={`${styles.paymentOption} ${selectedMethod === 'card' ? styles.selected : ''}`}
                         onClick={() => handleMethodSelect('card')}
                     >
-                        <div className={styles.visaIcon}>💳</div>
+                        {/* ЗАМЕНЯЕМ эмоджи на иконки */}
+                        <div className={styles.cardIcons}>
+                            <img src={visaIcon} alt="Visa" className={styles.cardIcon} />
+                            <img src={mastercardIcon} alt="MasterCard" className={styles.cardIcon} />
+                        </div>
                         <span className={styles.paymentText}>DEBIT/ CREDIT CARD</span>
                         <div className={styles.radioOuter}>
                             {selectedMethod === 'card' && <div className={styles.radioInner} />}

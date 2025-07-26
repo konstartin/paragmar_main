@@ -1,10 +1,9 @@
 /* src/components/checkout/Checkout.module.css */
 
 .checkoutContainer {
-    width: 40%;
+    width: 100%;
     min-width: 300px;
     height: 100vh;
-
     padding: 2.5% 3%;
     background-color: #000;
     color: #fff;
@@ -14,7 +13,6 @@
     margin-left: auto;
     font-family: 'Test Söhne Schmal';
     box-sizing: border-box;
-
 }
 
 .header {
@@ -22,18 +20,23 @@
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-
+    padding: 0;
 }
 
 .title {
-    font-size: 1.6em;
+    color: #FFF;
+    font-family: "Test Söhne Schmal";
+    font-size: 50px;
+    font-style: normal;
     font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
     margin: 0;
     display: flex;
     align-items: center;
-    height: 40px;
-    text-transform: uppercase;
-    font-family: 'Test Söhne Schmal';
+    height: auto;
+    transform: scaleX(0.6);
+    transform-origin: left;
 }
 
 .closeBtn {
@@ -56,7 +59,6 @@
     font-family: 'MD IO Trial';
     text-transform: uppercase;
     flex-shrink: 0;
-
 }
 
 .itemTitle {
@@ -92,7 +94,6 @@
     border-bottom: 1px solid grey;
     width: 100%;
     flex-shrink: 0;
-
 }
 
 .totalRow {
@@ -103,7 +104,6 @@
     font-size: 1em;
     text-transform: uppercase;
     flex-shrink: 0;
-
 }
 
 .totalLabel {
@@ -120,14 +120,13 @@
     font-family: 'MD IO Trial';
     text-transform: uppercase;
     flex-shrink: 0;
-
 }
 
 .paymentOption {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid grey;
+    border: 1px solid rgb(255, 255, 255);
     padding: 1em 1.5em;
     border-radius: 1em;
     margin-bottom: 1em;
@@ -137,23 +136,54 @@
     font-family: 'MD IO Trial';
     text-transform: uppercase;
     flex-shrink: 0;
-
 }
 
 .selected {
     border-color: white;
 }
 
+/* ПРАВИЛЬНОЕ позиционирование больших иконок */
 .cardIcons {
     display: flex;
-    gap: 0.5em;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin: 0;
 }
 
-.cardIcons img {
-    width: 24px;
-    height: 24px;
+.cardIcon {
+    width: 150px;
+    /* Большие иконки */
+    height: 75px;
+    object-fit: contain;
+    border-radius: 4px;
+    position: absolute;
 }
+
+/* Первая иконка (Visa) - используем transform для точного позиционирования */
+.cardIcon:first-child {
+    top: 50%;
+    /* По центру */
+    left: 50%;
+    /* По центру */
+    transform: translate(-55%, -40%);
+    /* Смещаем влево и немного вверх */
+    z-index: 2;
+}
+
+/* Вторая иконка (MasterCard) */
+.cardIcon:last-child {
+    top: 50%;
+    /* По центру */
+    left: 50%;
+    /* По центру */
+    transform: translate(-50%, -52%);
+    /* Смещаем вправо и вверх */
+    z-index: 1;
+}
+
 
 .metamaskIcon {
     width: 28px;

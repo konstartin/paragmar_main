@@ -33,9 +33,17 @@
     gap: 10px;
 }
 
+/* Старый стиль для смайлика - убираем */
 .metamaskIcon {
     font-size: 20px;
     color: #F6851B;
+}
+
+/* Новый стиль для PNG иконки */
+.metamaskIconImage {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .methodText {
@@ -113,19 +121,16 @@
     background-color: #252525;
 }
 
-
 .payButton {
-    margin-top: auto;
-
-    margin-bottom: 30px;
-    margin-left: auto;
-
-    margin-right: auto;
-
+    position: fixed;
+    /* Фиксированное позиционирование */
+    bottom: 5%;
+    /* 5% от низа экрана */
+    left: 80%;
+    /* По центру горизонтально */
+    transform: translateX(-50%);
+    /* Центрируем кнопку */
     width: 200px;
-
-    display: block;
-
     font-family: 'MD IO Trial';
     font-size: 1em;
     font-weight: bold;
@@ -139,6 +144,8 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    z-index: 100;
+    /* Поверх всех элементов */
 }
 
 .payButton:hover {

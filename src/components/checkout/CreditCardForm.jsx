@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import styles from './CreditCardForm.module.css';
+import visaIcon from '../../assets/icons/visa.png';
+import mastercardIcon from '../../assets/icons/mastercard.png';
 
 const CreditCardForm = ({ amountUSD = 38, onPay, onChangeMethod }) => {
-    // Pre-filled card data as shown in the design
+    // Pre-filled card data with EMAIL field
     const [cardData, setCardData] = useState({
         number: '5326 1152 2234 6448',
         expiry: '02/29',
         cvv: '265',
         name: 'ORIEL REISS',
+        email: 'ORIELREISS@GMAIL.COM',
     });
 
     const handleChange = (e) => {
@@ -25,13 +28,15 @@ const CreditCardForm = ({ amountUSD = 38, onPay, onChangeMethod }) => {
 
     return (
         <div className={styles.cardFormWrapper}>
-            {/* Payment Method label */}
             <div className={styles.paymentMethodLabel}>PAYMENT METHOD</div>
 
-            {/* Header with selected method and change button */}
             <div className={styles.methodHeader}>
                 <div className={styles.methodInfo}>
-                    <div className={styles.visaIcon}>💳</div>
+                    {/* ЗАМЕНЯЕМ эмоджи на иконки */}
+                    <div className={styles.cardIcons}>
+                        <img src={visaIcon} alt="Visa" className={styles.cardIcon} />
+                        <img src={mastercardIcon} alt="MasterCard" className={styles.cardIcon} />
+                    </div>
                     <span className={styles.methodText}>DEBIT/ CREDIT CARD</span>
                 </div>
                 <button
@@ -42,7 +47,7 @@ const CreditCardForm = ({ amountUSD = 38, onPay, onChangeMethod }) => {
                 </button>
             </div>
 
-            {/* Card form container */}
+            {/* Остальной код остается без изменений */}
             <div className={styles.cardFormContainer}>
                 <div className={styles.inputWrapper}>
                     <div className={styles.inputContainer}>
@@ -97,19 +102,28 @@ const CreditCardForm = ({ amountUSD = 38, onPay, onChangeMethod }) => {
                     </div>
                 </div>
 
+                <div className={styles.inputWrapper}>
+                    <div className={styles.inputContainer}>
+                        <span className={styles.inlineLabel}>EMAIL ADDRESS</span>
+                        <input
+                            type="email"
+                            name="email"
+                            className={styles.inputField}
+                            value={cardData.email}
+                            onChange={handleChange}
+                        />
+                    </div>
+                </div>
             </div>
-            <div>
 
-                {/* Pay button */}
+            <div>
                 <button
                     className={styles.payButton}
                     onClick={handleSubmit}
                 >
                     PAY {amountUSD}$
                 </button>
-
             </div>
-
         </div>
     );
 };

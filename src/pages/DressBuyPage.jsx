@@ -12,30 +12,11 @@ import { useQuiz } from '@/context/QuizContext';
 import { getObjectData } from '@/config/objectsConfig';
 
 const DressBuyPage = () => {
-  const { selectedBackground, getProduct } = useQuiz(); // Добавили getProduct
+  const { selectedBackground } = useQuiz();
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
-  // Получаем текущий продукт из контекста квиза
-  const productData = getProduct();
-
-  // Определяем тип одежды на основе данных продукта
-  const getCurrentClothingType = () => {
-    if (!productData) return 'warrior'; // fallback
-
-    // Ищем соответствующий ключ в конфиге по title
-    const configKeys = ['warrior', 'animal', 'eternal_child', 'mask', 'ruler', 'Voids', 'rubel', 'diva', 'caretaker'];
-
-    for (const key of configKeys) {
-      const configData = getObjectData(key);
-      if (configData && configData.title === productData.title) {
-        return key;
-      }
-    }
-
-    return 'warrior'; // fallback если не найдено
-  };
-
-  const currentClothingType = getCurrentClothingType();
+  // Get current clothing configuration
+  const currentClothingType = 'warrior';
   const currentClothingData = getObjectData(currentClothingType);
 
   // Extract pricing and info from config
@@ -46,7 +27,7 @@ const DressBuyPage = () => {
     cryptoSymbol: currentClothingData?.price?.cryptoSymbol || 'ETH'
   };
 
-  // Handle "Looks Good" button click - open checkout
+  // Handle "Looks Good" button click - open checkout with animation
   const handleLooksGoodClick = () => {
     console.log('Opening checkout...');
     setIsCheckoutOpen(true);
@@ -55,7 +36,6 @@ const DressBuyPage = () => {
   // Handle "Start Over" button click
   const handleStartOverClick = () => {
     console.log('Start Over clicked!');
-    // TODO: Add start over logic later
   };
 
   // Handle checkout close
@@ -67,22 +47,28 @@ const DressBuyPage = () => {
     <div className={styles.pageContainer}>
       <div className={`${styles.bgLayer} ${selectedBackground}`} />
 
+      {/* Header */}
       <header className={styles.headerArea}>
-        <ExtendHeader />
+        {/* <ExtendHeader /> */}
       </header>
 
+      {/* Left text section*/}
       <section className={styles.infoArea}>
-        <ProductInfo clothingName={clothingInfo.clothingName} />
+        <div className={`${styles.productInfoWrapper} ${isCheckoutOpen ? styles.fadeOut : ''}`}>
+          <ProductInfo clothingName={clothingInfo.clothingName} />
+        </div>
       </section>
 
-      <main className={styles.viewerArea}>
+      {/* 3D Viewer - with slide left animation when checkout opens */}
+      <main className={`${styles.viewerArea} ${isCheckoutOpen ? styles.slideLeft : ''}`}>
         <ProductViewer />
       </main>
 
+      {/* Footer */}
       <footer className={styles.actionsArea}>
         <PurchaseActions />
         {/* Price and buttons */}
-        <div className={styles.looksGoodContainer}>
+        <div className={`${styles.looksGoodContainer} ${isCheckoutOpen ? styles.fadeOut : ''}`}>
           <PriceDisplay
             priceUSD={clothingInfo.priceUSD}
             priceETH={clothingInfo.priceETH}
@@ -97,7 +83,7 @@ const DressBuyPage = () => {
 
       {/* Checkout Modal */}
       {isCheckoutOpen && (
-        <div className={styles.checkoutOverlay}>
+        <div className={styles.checkoutContainer}>
           <Checkout
             itemTitle={`[01]OF ${clothingInfo.clothingName.toUpperCase()}`}
             priceUSD={clothingInfo.priceUSD}

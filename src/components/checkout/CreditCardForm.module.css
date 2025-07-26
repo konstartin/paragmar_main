@@ -64,14 +64,24 @@
 
 /* Card form container */
 .cardFormContainer {
-    padding: 30px 25px;
-    background-color: #0f0f0f;
+    padding-top: 30px;
+    /* Верхний отступ остается */
+    padding-left: 25px;
+    /* Левый отступ остается */
+    padding-right: 25px;
+    /* Правый отступ остается */
+    padding-bottom: 30px;
+    /* Очень маленький нижний отступ */
+    background-color: #000000;
     border-radius: 27px;
-    border: 1px solid #333;
+    border: 1px solid #ffffff;
     display: flex;
     flex-direction: column;
     gap: 20px;
     flex: 1;
+    flex: none;
+    /* ДОБАВЬТЕ ЭТО - отключает flex растягивание */
+    height: auto;
 }
 
 .inputWrapper {
@@ -125,17 +135,15 @@
 
 
 .payButton {
-    margin-top: auto;
-
-    margin-bottom: 30px;
-    margin-left: auto;
-
-    margin-right: auto;
-
+    position: fixed;
+    /* Фиксированное позиционирование */
+    bottom: 5%;
+    /* 5% от низа экрана */
+    left: 80%;
+    /* По центру горизонтально */
+    transform: translateX(-50%);
+    /* Центрируем кнопку */
     width: 200px;
-
-    display: block;
-
     font-family: 'MD IO Trial';
     font-size: 1em;
     font-weight: bold;
@@ -149,9 +157,55 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    z-index: 100;
+    /* Поверх всех элементов */
 }
 
 .payButton:hover {
     background: white;
     color: black;
+}
+
+
+
+/* ПРАВИЛЬНОЕ позиционирование больших иконок */
+.cardIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+}
+
+.cardIcon {
+    width: 150px;
+    /* Большие иконки */
+    height: 75px;
+    object-fit: contain;
+    border-radius: 4px;
+    position: absolute;
+}
+
+/* Первая иконка (Visa) - используем transform для точного позиционирования */
+.cardIcon:first-child {
+    top: 50%;
+    /* По центру */
+    left: 50%;
+    /* По центру */
+    transform: translate(-55%, -40%);
+    /* Смещаем влево и немного вверх */
+    z-index: 2;
+}
+
+/* Вторая иконка (MasterCard) */
+.cardIcon:last-child {
+    top: 50%;
+    /* По центру */
+    left: 50%;
+    /* По центру */
+    transform: translate(-50%, -52%);
+    /* Смещаем вправо и вверх */
+    z-index: 1;
 }

@@ -44,12 +44,11 @@ const DressBuyPage = () => {
   };
 
   return (
-    <div className={styles.pageContainer}>
-      <div className={`${styles.bgLayer} ${selectedBackground}`} />
+    <div className={`${styles.pageContainer} ${selectedBackground}`}>
 
       {/* Header */}
       <header className={styles.headerArea}>
-        {/* <ExtendHeader /> */}
+        <ExtendHeader />
       </header>
 
       {/* Left text section*/}

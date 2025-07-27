@@ -4,18 +4,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-
-}
-
-.bgLayer {
-  position: fixed;
-  inset: 0;
+  /* Background support for global classes from index.css */
   background-size: cover;
-  background-position: center bottom;
+  background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
-  pointer-events: none;
 }
 
 .headerArea {

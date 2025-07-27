@@ -8,11 +8,13 @@ import './index.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <QuizProvider>
-        <App />
-      </QuizProvider>
-    </BrowserRouter>
+    <React.StrictMode>
+    <div className="aspect-wrapper">
+      <BrowserRouter>
+        <QuizProvider>
+          <App />
+        </QuizProvider>
+      </BrowserRouter>
+    </div>
   </React.StrictMode>
 );

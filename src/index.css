@@ -1,4 +1,4 @@
-
+/* 
  @font-face {
   font-family: 'MD IO Trial';
   src: url('@/assets/fonts/MDIO-Regular-Trial.otf');
@@ -35,4 +35,88 @@ body {
 }
 .snow {
     background-image: url('./assets/questions/snow.jpg');
+}
+
+.aspect-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  height: 56.25vw; 
+
+  max-height: 100vh;
+  max-width: 177.78vh; 
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+} */
+ /* --- Fonts --- */
+@font-face {
+  font-family: 'MD IO Trial';
+  src: url('@/assets/fonts/MDIO-Regular-Trial.otf');
+}
+@font-face {
+  font-family: 'Test Sohne Schmal';
+  src: url('@/assets/fonts/TestSohneSchmal-Halbfett.otf');
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* מסך מלא, רקע שחור, מרכז את #root */
+html, body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'MD IO Trial', sans-serif;
+}
+
+/* מרכז את aspect-wrapper */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* עוטף את כל האפליקציה, שמור על 16:9 */
+.aspect-wrapper {
+  width: 100vw;
+  height: 56.25vw; /* 16:9 */
+  max-height: 100vh;
+  max-width: 177.78vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* רקעים לעמודי decoding */
+.desert {
+  background-image: url('./assets/questions/desert.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.lake {
+  background-image: url('./assets/questions/lake.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.snow {
+  background-image: url('./assets/questions/snow.jpg');
+  background-size: cover;
+  background-position: center;
 }

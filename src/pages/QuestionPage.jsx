@@ -12,7 +12,7 @@ import styles from './QuestionPage.module.css';
 export default function QuestionPage() {
   const { id } = useParams();
   const indexFromUrl = Number(id);
-  
+
   const { selectedBackground, saveAnswer } = useQuiz();
   const navigate = useNavigate();
 
@@ -76,9 +76,9 @@ export default function QuestionPage() {
   return (
     <div className={`${styles.pageContainer} ${selectedBackground}`}>
       <div className={styles.headerPlacement}>
-        <ExtendedHeader 
-          currentQuestionId={Number(id)} 
-          backPath={`/question/${Number(id) - 1}`} 
+        <ExtendedHeader
+          currentQuestionId={Number(id)}
+          backPath={`/question/${Number(id) - 1}`}
         />
       </div>
       <div className={styles.titlePlacement}>

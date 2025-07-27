@@ -4,13 +4,13 @@ import layerHSvg from '@/assets/questions/Layer_H.svg';
 import styles from './HorizontalQuestions.module.css';
 
 const questions = {
-    10: {
+    9: {
         options: ['FIBER GRID', 'CORAL FRAME', 'SKELETAL BLOOM']
     },
-    11: {
+    10: {
         options: ['PULSING BEAT', 'WAVE FLOW', 'UNEXPECTED MOTION']
     },
-    12: {
+    11: {
         options: ['LOOSE FLOW', 'PIERCING FORM', 'SOFT CLUSTER']
     }
 };
@@ -18,7 +18,7 @@ const questions = {
 export default function HorizontalQuestions({ questionIndex, onAnswer }) {
     const { answers } = useQuiz();
     const selected = answers[questionIndex];
-    const questionNum = questionIndex + 1;
+    const questionNum = questionIndex;
     const question = questions[questionNum];
 
     if (!question) return null;

@@ -12,7 +12,7 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
   const selected = answers[questionIndex];
   const question = getQuestionConfig(questionIndex);
   const positions = question.positions;
-  const config = getSplineConfig(questionIndex + 1);
+  const config = getSplineConfig(questionIndex);
 
   const handleSelect = (value) => {
     onAnswer(questionIndex, value);

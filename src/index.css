@@ -110,18 +110,22 @@ body {
 /* רקעים לעמודי decoding */
 .desert {
   background-image: url('./assets/questions/desert.jpg');
-  background-size: 120% !important;
+  background-size: cover !important;
   background-position: center;
+  aspect-ratio: 16 / 9 !important;
+
 }
 
 .lake {
   background-image: url('./assets/questions/lake.jpg');
-  background-size: 120% !important;
+  background-size: cover !important;
   background-position: center;
+  aspect-ratio: 16 / 9 !important;
 }
 
 .snow {
   background-image: url('./assets/questions/snow.jpg');
-  background-size: 120% !important;
+  background-size: cover !important;
   background-position: center;
+  aspect-ratio: 16 / 9 !important;
 }

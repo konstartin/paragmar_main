@@ -53,11 +53,12 @@ body {
   display: flex;
   flex-direction: column;
 } */
- /* --- Fonts --- */
+/* --- Fonts --- */
 @font-face {
   font-family: 'MD IO Trial';
   src: url('@/assets/fonts/MDIO-Regular-Trial.otf');
 }
+
 @font-face {
   font-family: 'Test Sohne Schmal';
   src: url('@/assets/fonts/TestSohneSchmal-Halbfett.otf');
@@ -71,7 +72,8 @@ body {
 }
 
 /* מסך מלא, רקע שחור, מרכז את #root */
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -95,7 +97,8 @@ html, body {
 /* עוטף את כל האפליקציה, שמור על 16:9 */
 .aspect-wrapper {
   width: 100vw;
-  height: 56.25vw; /* 16:9 */
+  height: 56.25vw;
+  /* 16:9 */
   max-height: 100vh;
   max-width: 177.78vh;
   display: flex;
@@ -107,16 +110,18 @@ html, body {
 /* רקעים לעמודי decoding */
 .desert {
   background-image: url('./assets/questions/desert.jpg');
-  background-size: cover;
+  background-size: 120% !important;
   background-position: center;
 }
+
 .lake {
   background-image: url('./assets/questions/lake.jpg');
-  background-size: cover;
+  background-size: 120% !important;
   background-position: center;
 }
+
 .snow {
   background-image: url('./assets/questions/snow.jpg');
-  background-size: cover;
+  background-size: 120% !important;
   background-position: center;
 }

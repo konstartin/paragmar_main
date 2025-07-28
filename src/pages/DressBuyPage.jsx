@@ -12,20 +12,20 @@ import { useQuiz } from '@/context/QuizContext';
 import { getObjectData } from '@/config/objectsConfig';
 
 const DressBuyPage = () => {
-  const { selectedBackground } = useQuiz();
+  const { selectedBackground, getProduct } = useQuiz();
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
-  // Get current clothing configuration
-  const currentClothingType = 'warrior';
-  const currentClothingData = getObjectData(currentClothingType);
+  // Same logic as DressPage - that's it!
+  const currentClothingData = getProduct();
 
-  // Extract pricing and info from config
+  // Extract pricing and info from the SAME source as DressPage
   const clothingInfo = {
     clothingName: currentClothingData?.clothingName || 'Unknown Item',
     priceUSD: currentClothingData?.price?.usd || 0,
     priceETH: currentClothingData?.price?.crypto || 0,
     cryptoSymbol: currentClothingData?.price?.cryptoSymbol || 'ETH'
   };
+
 
   // Handle "Looks Good" button click - open checkout with animation
   const handleLooksGoodClick = () => {

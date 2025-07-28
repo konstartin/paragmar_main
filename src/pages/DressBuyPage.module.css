@@ -50,7 +50,7 @@
 .looksGoodContainer {
   position: fixed;
   top: 95%;
-  left: 90%;
+  left: 95%;
   transform: translate(-100%, -100%);
   z-index: 10;
   display: flex;

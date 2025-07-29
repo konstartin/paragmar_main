@@ -1,4 +1,3 @@
-
 import React, { Suspense, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -14,13 +13,10 @@ function SlowEntranceModel({ url }) {
   const { nodes } = useGLTF(url);
   const mainMesh = nodes.mesh_0;
 
-  const zoomDuration = 8; 
-  const bloomFadeDuration = 11; 
-  const targetScale = 6.0; 
-
+  const bloomFadeDuration = 11;
   const opacityPhaseOneEnd = 7;
-  const opacityPhaseTwoDuration = 4; 
-  const initialOpacity = 0.15; 
+  const opacityPhaseTwoDuration = 4;
+  const initialOpacity = 0.15;
 
   useEffect(() => {
     if (mainMesh) {
@@ -29,23 +25,22 @@ function SlowEntranceModel({ url }) {
     }
   }, [mainMesh]);
 
+  
+
+
   useEffect(() => {
     const navigationTimer = setTimeout(() => {
       navigate('/dressbuy');
-    }, (bloomFadeDuration + 1) * 1000); 
+    }, (bloomFadeDuration + 1) * 1000);
 
-    return () => clearTimeout(navigationTimer); 
+    return () => clearTimeout(navigationTimer);
   }, [navigate]);
 
   useFrame((state) => {
     if (!meshRef.current || !effectRef.current) return;
 
     const elapsedTime = state.clock.getElapsedTime();
-    
-    const zoomProgress = Math.min(elapsedTime / zoomDuration, 1);
-    const currentScale = zoomProgress * targetScale;
-    meshRef.current.scale.set(currentScale, currentScale, currentScale);
- 
+
     let currentOpacity;
     if (elapsedTime < opacityPhaseOneEnd) {
       currentOpacity = (elapsedTime / opacityPhaseOneEnd) * initialOpacity;
@@ -65,11 +60,11 @@ function SlowEntranceModel({ url }) {
 
   return (
     <>
-      <mesh ref={meshRef} geometry={mainMesh.geometry} material={mainMesh.material} />
+      <mesh ref={meshRef} geometry={mainMesh.geometry} material={mainMesh.material} position={[0, 0.2, 0]} />
       <EffectComposer>
         <Bloom
           ref={effectRef}
-          intensity={2.0} 
+          intensity={2.0}
           luminanceThreshold={0.5}
           luminanceSmoothing={0.9}
           height={480}
@@ -92,9 +87,9 @@ const ModelViewer = () => {
 
   return (
     <div className={styles.canvasContainer}>
-      <Canvas camera={{ position: [0, 2, 20], fov: 50 }}>
+      <Canvas camera={{ fov: 30, near: 0.01, far: 2000 }}>
         <ambientLight intensity={1.5} />
-        <directionalLight position={[5, 10, 7.5]} intensity={2.5} />
+        <directionalLight position={[8, 10, 7.5]} intensity={2.5} />
         <Suspense fallback={null}>
           <SlowEntranceModel url={modelUrl} />
         </Suspense>

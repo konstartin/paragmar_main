@@ -28,7 +28,11 @@ const SoundManager = () => {
         Object.values(audioRefs.current).forEach(audio => {
             if (audio) {
                 audio.preload = 'auto';
-                audio.volume = 0.3; // 30% громкости
+                if (type === 'dressSound') {
+                    audio.volume = 1.0; // ← Увеличить с 0.3 до 0.8
+                } else {
+                    audio.volume = 0.3; // 30% громкости
+                }
             }
         });
     }, []);

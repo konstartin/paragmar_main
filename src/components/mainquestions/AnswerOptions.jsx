@@ -15,7 +15,17 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
   const config = getSplineConfig(questionIndex);
 
   const handleSelect = (value) => {
+    if (window.playSound) {
+      window.playSound('select');
+    }
+
     onAnswer(questionIndex, value);
+  };
+
+  const handleMouseEnter = () => {
+    if (window.playSound) {
+      window.playSound('hover');
+    }
   };
 
   const buildColumn = (topKey, bottomKey, className) => {
@@ -26,6 +36,7 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
         <button
           className={`${styles.option} ${selected === top.value ? styles.selected : ''}`}
           onClick={() => handleSelect(top)}
+          onMouseEnter={handleMouseEnter}
         >
           {top.label}
         </button>
@@ -33,6 +44,7 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
         <button
           className={`${styles.option} ${selected === bottom.value ? styles.selected : ''}`}
           onClick={() => handleSelect(bottom)}
+          onMouseEnter={handleMouseEnter}
         >
           {bottom.label}
         </button>

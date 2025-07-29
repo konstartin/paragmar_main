@@ -71,10 +71,10 @@ export default function QuestionPage() {
     return null;
   }
 
-  const instructionText = getInstructionText(indexFromUrl + 1);
+  const instructionText = getInstructionText(indexFromUrl);
 
   return (
-    <div className={`${styles.pageContainer} ${selectedBackground}`}>
+    <div className={`${styles.pageContainer}`}>
       <div className={styles.headerPlacement}>
         <ExtendedHeader
           currentQuestionId={Number(id)}
@@ -83,7 +83,7 @@ export default function QuestionPage() {
       </div>
       <div className={styles.titlePlacement}>
         <InstructionOverlay
-          currentStep={indexFromUrl + 1}
+          currentStep={indexFromUrl}
           line1={instructionText.line1}
           line2={instructionText.line2}
         />

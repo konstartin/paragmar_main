@@ -44,7 +44,7 @@ const DressBuyPage = () => {
   };
 
   return (
-    <div className={`${styles.pageContainer} ${selectedBackground}`}>
+    <div className={`${styles.pageContainer}`}>
 
       {/* Header */}
       <header className={styles.headerArea}>

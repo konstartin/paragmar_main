@@ -14,8 +14,8 @@ import rulerStatic from '../assets/3dobjects/ruler_static.glb?url';
 import rulerDynamic from '../assets/3dobjects/ruler.glb?url';
 import voidStatic from '../assets/3dobjects/void_static.glb?url';
 import voidDynamic from '../assets/3dobjects/void.glb?url';
-import childStatic from '../assets/3dobjects/test.glb?url';
-import childDynamic from '../assets/3dobjects/testMoving.glb?url';
+import childStatic from '../assets/3dobjects/eternial_child_static.glb?url';
+import childDynamic from '../assets/3dobjects/eternal_child.glb?url';
 
 const objectsData = {
   eternal_child: {

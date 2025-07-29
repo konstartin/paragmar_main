@@ -96,15 +96,20 @@ body {
 
 /* עוטף את כל האפליקציה, שמור על 16:9 */
 .aspect-wrapper {
-  width: 100vw;
-  height: 56.25vw;
+  width: 100vw !important;
+  height: 56.25vw !important;
   /* 16:9 */
-  max-height: 100vh;
-  max-width: 177.78vh;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  overflow: hidden;
+  max-height: 100vh !important;
+  max-width: 177.78vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: white !important;
+  overflow: hidden !important;
+  position: relative !important;
+
+  min-width: 0 !important;
+  min-height: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* רקעים לעמודי decoding */

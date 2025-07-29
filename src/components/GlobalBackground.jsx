@@ -64,7 +64,7 @@ const GlobalBackground = () => {
 
             return () => clearInterval(interval);
         }
-    }, [selectedBackground]); // ✅ УБРАЛИ location.pathname!
+    }, [selectedBackground]);
 
     // Handle user interaction to enable autoplay
     useEffect(() => {
@@ -132,7 +132,7 @@ const GlobalBackground = () => {
     return (
         <video
             ref={videoRef}
-            key={selectedBackground} // ✅ УБРАЛИ location.pathname из key!
+            key={selectedBackground}
             autoPlay
             loop
             muted
@@ -156,13 +156,20 @@ const GlobalBackground = () => {
                 setTimeout(() => forceVideoPlay(videoRef.current), 50);
             }}
             style={{
+                // Match aspect-wrapper positioning and size exactly
                 position: 'fixed',
-                top: 0,
-                left: 0,
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+
+                // Same 16:9 constraints as aspect-wrapper
                 width: '100vw',
-                height: '100vh',
+                height: '56.25vw', // 16:9 ratio
+                maxHeight: '100vh',
+                maxWidth: '177.78vh', // When height is limiting
+
                 objectFit: 'cover',
-                zIndex: 0,
+                zIndex: 0, // Behind aspect-wrapper
                 pointerEvents: 'none'
             }}
         >

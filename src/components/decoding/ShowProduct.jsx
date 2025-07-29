@@ -12,14 +12,29 @@ export default function ShowProduct() {
   const centerRef = useRef(null);
 
 
-useEffect(() => {
-  const el = centerRef.current;
-  const endHandler = () => {
-    setTimeout(() => navigate('/decoding/showdescription'), 1000);
-  };
-  el.addEventListener('animationend', endHandler);
-  return () => el.removeEventListener('animationend', endHandler);
-}, [navigate]);
+
+  useEffect(() => {
+    const soundTimer = setTimeout(() => {
+      if (window.playSound) {
+        console.log('Playing dress sound...');
+        window.playSound('dressSound');
+      } else {
+        console.log('playSound not available');
+      }
+    }, 10);
+
+    return () => clearTimeout(soundTimer);
+  }, []);
+
+
+  useEffect(() => {
+    const el = centerRef.current;
+    const endHandler = () => {
+      setTimeout(() => navigate('/decoding/showdescription'), 1000);
+    };
+    el.addEventListener('animationend', endHandler);
+    return () => el.removeEventListener('animationend', endHandler);
+  }, [navigate]);
 
   return (
     <div className={styles.container}>

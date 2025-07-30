@@ -4,13 +4,13 @@ import layerHSvg from '@/assets/questions/Layer_H.svg';
 import styles from './HorizontalQuestions.module.css';
 
 const questions = {
-    9: {
+    10: {
         options: ['FIBER GRID', 'CORAL FRAME', 'SKELETAL BLOOM']
     },
-    10: {
+    11: {
         options: ['PULSING BEAT', 'WAVE FLOW', 'UNEXPECTED MOTION']
     },
-    11: {
+    12: {
         options: ['LOOSE FLOW', 'PIERCING FORM', 'SOFT CLUSTER']
     }
 };

@@ -103,7 +103,7 @@ const objectsData = {
     },
   },
 
-  Voids: {
+  voids: {
     title: 'The Void',
     clothingName: 'Voidskin', // Display name for clothing
     id: '[void//0593]',
@@ -120,7 +120,7 @@ const objectsData = {
     },
   },
 
-  rubel: {
+  rebel: {
     title: 'The Rebel',
     clothingName: 'Rebel Cut', // Display name for clothing
     id: '[rebel//0594]',
@@ -201,20 +201,3 @@ export const getClothingName = (objectName) => {
   return objectData?.clothingName || null;
 };
 
-/*
-'FIBER GRID': {
-    'LOOSE FLOW': 'animal',
-    'PIERCING FORM': 'warrior',
-    'SOFT CLUSTER': 'eternal_child',
-  },
-  'CORAL FRAME': {
-    'LOOSE FLOW': 'rubel',
-    'PIERCING FORM': 'diva',
-    'SOFT CLUSTER': 'caretaker',
-  },
-  'SKELTAL BLOOM': {
-    'LOOSE FLOW': 'mask',
-    'PIERCING FORM': 'ruler',
-    'SOFT CLUSTER': 'Voids',
-  },
-  */

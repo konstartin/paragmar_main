@@ -1,6 +1,6 @@
 const questions = [
   {
-    questionNumber: 1,
+    questionNumber: 2,
     positions: {
       leftTop:    { label: 'COBRA ARMS',       value: 'COBRA ARMS' },
       rightTop:   { label: 'SPIKY CROWN',      value: 'SPIKY CROWN' },
@@ -9,7 +9,7 @@ const questions = [
     }
   },
   {
-    questionNumber: 2,
+    questionNumber: 3,
     positions: {
       leftTop:    { label: 'BAT OR BUTTERFLY', value: 'BAT OR BUTTERFLY' },
       rightTop:   { label: 'CRUSHED BODY',     value: 'CRUSHED BODY' },
@@ -18,7 +18,7 @@ const questions = [
     }
   },
   {
-    questionNumber: 3,
+    questionNumber: 4,
     positions: {
       leftTop:    { label: 'BODY PARTS',       value: 'BODY PARTS' },
       rightTop:   { label: 'DOG FACE',         value: 'DOG FACE' },
@@ -27,7 +27,7 @@ const questions = [
     }
   },
   {
-    questionNumber: 4,
+    questionNumber: 5,
     positions: {
       leftTop:    { label: 'BLOODY HANDS',     value: 'BLOODY HANDS' },
       rightTop:   { label: 'TWO STAGS',        value: 'TWO STAGS' },
@@ -36,7 +36,7 @@ const questions = [
     }
   },
   {
-    questionNumber: 5,
+    questionNumber: 6,
     positions: {
       leftTop:    { label: 'FEMALE TORSO',     value: 'FEMALE TORSO' },
       rightTop:   { label: 'INK STAIN',        value: 'INK STAIN' },
@@ -45,7 +45,7 @@ const questions = [
     }
   },
   {
-    questionNumber: 6,
+    questionNumber: 7,
     positions: {
       leftTop:    { label: 'BURSTING BOMB',    value: 'BURSTING BOMB' },
       rightTop:   { label: 'BLOODY SPINE',     value: 'BLOODY SPINE' },
@@ -54,7 +54,7 @@ const questions = [
     }
   },
   {
-    questionNumber: 7,
+    questionNumber: 8,
     positions: {
       leftTop:    { label: 'GORILLA FIGURE',   value: 'GORILLA FIGURE' },
       rightTop:   { label: 'BATTLE MASK',      value: 'BATTLE MASK' },
@@ -63,7 +63,7 @@ const questions = [
     }
   },
   {
-    questionNumber: 8,
+    questionNumber: 9,
     positions: {
       leftTop:    { label: 'WAR EMBLEM',       value: 'WAR EMBLEM' },
       rightTop:   { label: 'MELTED SKULLS',    value: 'MELTED SKULLS' },

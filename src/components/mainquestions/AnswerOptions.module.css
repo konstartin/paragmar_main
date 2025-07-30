@@ -43,13 +43,13 @@
 }
 
 .leftColumn {
-  top: 380px;
-  left: 100px;
+  top: 45%;
+  left: 5%;
 }
 
 .rightColumn {
-  top: 380px;
-  right: 100px;
+  top: 45%;
+  right: 5%;
 }
 
 .option {

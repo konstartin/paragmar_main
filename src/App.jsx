@@ -9,10 +9,13 @@ const QuestionPage = React.lazy(() => import('./pages/QuestionPage'));
 const DecodingPage = React.lazy(() => import('./pages/DecodingPage'));
 const DressPage = React.lazy(() => import('./pages/DressPage.jsx'));
 const DressBuyPage = React.lazy(() => import('./pages/DressBuyPage.jsx'));
+const AboutPage = React.lazy(() => import('./pages/AboutPage.jsx'));
+
 
 const DecodingContent = React.lazy(() => import('./components/decoding/DecodingContent'));
 const ShowProduct = React.lazy(() => import('./components/decoding/ShowProduct'));
 const ShowDescription = React.lazy(() => import('./components/decoding/ShowDescription'));
+
 
 
 const SimpleLoader = () => <div>Loading Page…</div>;
@@ -36,6 +39,7 @@ export default function App() {
           </Route>
           <Route path="/dress" element={<DressPage />} />
           <Route path="/dressbuy" element={<DressBuyPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Route>
       </Routes>
     </Suspense>

@@ -8,6 +8,15 @@ import styles from './ShowProduct.module.css';
 export default function ShowProduct() {
   const { getProduct } = useQuiz();
   const product = getProduct();
+
+  console.log('Product received in ShowProduct component:', product);
+  
+   if (!product) {
+    
+    return <div>Loading Product...</div>;
+  }
+
+
   const navigate = useNavigate();
   const centerRef = useRef(null);
 
@@ -16,7 +25,7 @@ export default function ShowProduct() {
   useEffect(() => {
     const soundTimer = setTimeout(() => {
       if (window.playSound) {
-        console.log('Playing dress sound...');
+        // console.log('Playing dress sound...');
         window.playSound('dressSound');
       } else {
         console.log('playSound not available');

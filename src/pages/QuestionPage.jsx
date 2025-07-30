@@ -27,7 +27,7 @@ export default function QuestionPage() {
 
     const nextQuestionId = Number(id) + 1;
 
-    if (nextQuestionId > 11) {
+    if (nextQuestionId > 12) {
       navigate('/decoding');
     } else {
       navigate(`/question/${nextQuestionId}`);
@@ -88,7 +88,7 @@ export default function QuestionPage() {
           line2={instructionText.line2}
         />
       </div>
-      {indexFromUrl >= 9 ? (
+      {indexFromUrl >= 10 ? (
         <HorizontalQuestions
           questionIndex={indexFromUrl}
           onAnswer={handleAnswerSelect}

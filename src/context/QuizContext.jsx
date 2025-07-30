@@ -11,11 +11,12 @@ const productLogicMap = {
     'SOFT CLUSTER': 'eternal_child',
   },
   'CORAL FRAME': {
-    'LOOOSE FLOW': 'rebel',
+    'LOOSE FLOW': 'rebel',
     'PIERCING FORM': 'diva',
     'SOFT CLUSTER': 'caretaker',
   },
-  'SKELTAL BLOOM': {
+  
+  'SKELETAL BLOOM': {
     'LOOSE FLOW': 'mask',
     'PIERCING FORM': 'ruler',
     'SOFT CLUSTER': 'void',
@@ -45,10 +46,23 @@ export function QuizProvider({ children }) {
     }
   });
 
-  const finalProduct = useMemo(
-    () => (finalProductKey ? getObjectData(finalProductKey) : null),
-    [finalProductKey]
-  );
+//   const finalProduct = useMemo(
+//     () =>{
+//       console.log('useMemo is running. finalProductKey is:', finalProductKey); 
+//       (finalProductKey ? getObjectData(finalProductKey) : null),
+//     [finalProductKey]
+// });
+const finalProduct = useMemo(() => {
+ 
+    console.log('useMemo is running. finalProductKey is:', finalProductKey);
+    
+    if (!finalProductKey) return null;
+
+    const productData = getObjectData(finalProductKey);
+    console.log(`Result from getObjectData for key "${finalProductKey}":`, productData);
+
+    return productData;
+}, [finalProductKey]);
 
   useEffect(() => {
     if (selectedBackground) localStorage.setItem('selectedBackground', selectedBackground);
@@ -61,11 +75,16 @@ export function QuizProvider({ children }) {
   }, [finalProductKey]);
 
   const determineAndSetProduct = useCallback(() => {
-    const answer10 = answers[9];
-    const answer12 = answers[11];
+    const answer10 = answers[10]?.label;
+    const answer12 = answers[12]?.label;
+    console.log('Answer 10.label:', answer10);
+    console.log('Answer 12.label:', answer12);
+    console.log('Answer 10:', answers[10]);
+    console.log('Answer 12:', answers[12]);
     let productKey = 'warrior';
     if (answer10 && answer12) {
-      const determinedKey = productLogicMap[answer10.label]?.[answer12.label];
+      const determinedKey = productLogicMap[answer10]?.[answer12];
+      console.log('Determined Key:', determinedKey);
       if (determinedKey) productKey = determinedKey;
     }
     setFinalProductKey(productKey);
@@ -79,8 +98,6 @@ export function QuizProvider({ children }) {
     setCurrentIndex(0);
     setAnswers({});
     setFinalProductKey(null);
-    localStorage.removeItem('selectedBackground');
-    localStorage.removeItem('finalProductKey');
   };
 
   const saveAnswer = (questionIndex, answer) => {

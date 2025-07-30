@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuiz } from '../context/QuizContext';
@@ -11,12 +10,13 @@ import InstructionOverlay from '../components/InstructionOverlay';
 export default function BackgroundSelectionPage() {
     const navigate = useNavigate();
     const { selectBackground, next, saveAnswer } = useQuiz();
-    const handleSelection = (backgroundId, backgroundLabel) => {    
-    const cleanLabel = backgroundLabel.replace('STEP INTO ', '');
-    saveAnswer(1, { label: cleanLabel });
-    selectBackground(backgroundId);
-    next();
-    navigate('/question/2');
+
+    const handleSelection = (backgroundId, backgroundLabel) => {
+        const cleanLabel = backgroundLabel.replace('STEP INTO ', '');
+        saveAnswer(1, { label: cleanLabel });
+        selectBackground(backgroundId);
+        next();
+        navigate('/question/2');
     };
 
     return (
@@ -27,18 +27,28 @@ export default function BackgroundSelectionPage() {
                 line2="your environment"
             />
             {Object.entries(backgroundConfig).map(([id, config]) => (
-                <div
-                    key={id}
-                    className={`${styles.backgroundOption} ${styles[id]}`}
-                >
-                    <div className={styles.headerPlacement}>
-                        <SimpleHeader  backPath="/" />
-                    </div>
-                    <div className={styles.buttonPlacement}>
-                        <SelectionButton
-                            text={config.label}
-                            onClick={() => handleSelection(id, config.label)}
-                        />
+                <div key={id} className={styles.backgroundOption}>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={styles.backgroundVideo}
+                    >
+                        <source src={config.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div className={styles.contentWrapper}>
+                        <div className={styles.headerPlacement}>
+                            <SimpleHeader  backPath="/" />
+                        </div>
+                        <div className={styles.buttonPlacement}>
+                            <SelectionButton
+                                text={config.label}
+                                onClick={() => handleSelection(id, config.label)}
+                            />
+                        </div>
                     </div>
                 </div>
             ))}

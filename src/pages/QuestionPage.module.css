@@ -8,10 +8,13 @@
   background-repeat: no-repeat;
 }
 
+
 .headerPlacement {
   transform: translateY(-10px);
   z-index: 10;
 }
+
+
 .sidebarPlacement {
   position: absolute;
   bottom: 0px; 

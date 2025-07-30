@@ -15,8 +15,10 @@ root.render(
       <BrowserRouter>
         <QuizProvider>
           <GlobalBackground />
+          <div className="content-on-top">
           <SoundManager />
           <App />
+          </div>
         </QuizProvider>
       </BrowserRouter>
     </div>

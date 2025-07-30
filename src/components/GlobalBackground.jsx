@@ -31,9 +31,9 @@ const GlobalBackground = () => {
 
             try {
                 await playAttempts[attemptIndex]();
-                console.log(`✅ Video started on attempt ${attemptIndex + 1}`);
+                // console.log(`✅ Video started on attempt ${attemptIndex + 1}`);
             } catch (error) {
-                console.log(`❌ Attempt ${attemptIndex + 1} failed:`, error);
+                // console.log(`❌ Attempt ${attemptIndex + 1} failed:`, error);
                 setTimeout(() => tryPlay(attemptIndex + 1), 100);
             }
         };
@@ -57,7 +57,7 @@ const GlobalBackground = () => {
             // Set up interval to ensure video keeps playing
             const interval = setInterval(() => {
                 if (video.paused) {
-                    console.log('🔄 Video paused, restarting...');
+                    // console.log('🔄 Video paused, restarting...');
                     forceVideoPlay(video);
                 }
             }, 1000);
@@ -90,6 +90,7 @@ const GlobalBackground = () => {
     // Define pages where video background should be shown
     const allowedPages = [
         '/dress',
+        '/about',
         '/dressbuy',
         '/decoding',
         '/question/2',
@@ -112,13 +113,13 @@ const GlobalBackground = () => {
 
     // Exclude first question specifically
     if (location.pathname === '/question/1') {
-        console.log('🚫 Video not shown on first question');
+        // console.log('🚫 Video not shown on first question');
         return null;
     }
 
     // Don't show video on pages where it's not needed
     if (!shouldShowVideo) {
-        console.log('🚫 Video not shown on:', location.pathname);
+        // console.log('🚫 Video not shown on:', location.pathname);
         return null;
     }
 
@@ -127,7 +128,7 @@ const GlobalBackground = () => {
     const videoSrc = backgroundConfig[selectedBackground]?.video;
     if (!videoSrc) return null;
 
-    console.log('🎥 Showing video on:', location.pathname, 'Background:', selectedBackground);
+    // console.log('🎥 Showing video on:', location.pathname, 'Background:', selectedBackground);
 
     return (
         <video
@@ -141,18 +142,18 @@ const GlobalBackground = () => {
             controls={false}
             disablePictureInPicture
             onLoadedData={() => {
-                console.log('✅ Video loaded:', selectedBackground);
+                // console.log('✅ Video loaded:', selectedBackground);
                 forceVideoPlay(videoRef.current);
             }}
             onCanPlay={() => {
-                console.log('📺 Video can play:', selectedBackground);
+                // console.log('📺 Video can play:', selectedBackground);
                 forceVideoPlay(videoRef.current);
             }}
             onLoadedMetadata={() => {
                 forceVideoPlay(videoRef.current);
             }}
             onPause={() => {
-                console.log('⏸️ Video paused, restarting...');
+                // console.log('⏸️ Video paused, restarting...');
                 setTimeout(() => forceVideoPlay(videoRef.current), 50);
             }}
             style={{
@@ -169,7 +170,7 @@ const GlobalBackground = () => {
                 maxWidth: '177.78vh', // When height is limiting
 
                 objectFit: 'cover',
-                zIndex: 0, // Behind aspect-wrapper
+                zIndex: 1, // Behind aspect-wrapper
                 pointerEvents: 'none'
             }}
         >

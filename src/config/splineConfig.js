@@ -17,27 +17,35 @@ import scene9 from '@/assets/3dobjects/scene9.splinecode?url';
 export const SPLINE_CONFIGS = {
     2: {
         url: scene2,
+        name: 'רורשאך1',
     },
     3: {
         url: scene3,
+        name: '2רורשאך3',
     },
     4: {
         url: scene4,
+        name: 'רורשאך3',
     },
     5: {
         url: scene5,
+        name: 'ורשאך4',
     },
     6: {
         url: scene6,
+        name: 'רורשאך5',
     },
     7: {
         url: scene7,
+        name: 'רורשאך6',
     },
     8: {
         url: scene8,
+        name: '7רורשאך',
     },
     9: {
         url: scene9,
+        name: 'רורשאך8',
     },
 };
 

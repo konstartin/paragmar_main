@@ -51,7 +51,7 @@
     position: absolute;
     top:0;
     margin-top: 2px;
-    left : 117px;
+    left : 150px;
     flex-shrink: 0;
     color: #FFF;
     font-family: Helvetica;
@@ -66,6 +66,7 @@
 .logoImage {
     width: 114.065px;
     height: 32.626px;
+    transform: translateX(30%);
 }
 
 .rightWrapper {

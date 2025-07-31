@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import styles from './MetaMaskForm.module.css';
 import metamaskIcon from '../../assets/icons/metamask.png'; // Добавляем импорт иконки
+import { useNavigate } from 'react-router-dom';
 
 const MetaMaskForm = ({ amountETH = 0.014, cryptoSymbol = 'ETH', onPay, onChangeMethod, onClose }) => {
     // Pre-filled Ethereum address as shown in the design
     const [ethereumAddress, setEthereumAddress] = useState('1BMLTXMEVE99TMHJFSZJHQH');
+    const navigate = useNavigate();
 
     const handleAddressChange = (e) => {
         setEthereumAddress(e.target.value);
@@ -16,6 +18,7 @@ const MetaMaskForm = ({ amountETH = 0.014, cryptoSymbol = 'ETH', onPay, onChange
             amount: amountETH,
             currency: cryptoSymbol
         };
+        navigate('/purchasecomplete');
 
         if (onPay) onPay(paymentData);
         else console.log("Paying with MetaMask:", paymentData);

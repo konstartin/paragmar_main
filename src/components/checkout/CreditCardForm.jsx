@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import styles from './CreditCardForm.module.css';
 import visaIcon from '../../assets/icons/visa.png';
 import mastercardIcon from '../../assets/icons/mastercard.png';
+import { useNavigate } from 'react-router-dom';
+
 
 const CreditCardForm = ({ amountUSD = 38, onPay, onChangeMethod }) => {
     // Pre-filled card data with EMAIL field
+    const navigate = useNavigate();
     const [cardData, setCardData] = useState({
         number: '5326 1152 2234 6448',
         expiry: '02/29',
@@ -20,7 +23,9 @@ const CreditCardForm = ({ amountUSD = 38, onPay, onChangeMethod }) => {
     const handleSubmit = () => {
         if (onPay) onPay(cardData);
         else console.log("Paying with card:", cardData);
+        navigate('/purchasecomplete');
     };
+
 
     const handleChangeMethod = () => {
         if (onChangeMethod) onChangeMethod();

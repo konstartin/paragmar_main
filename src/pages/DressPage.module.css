@@ -2,9 +2,6 @@
 .pageContainer {
   width: 100%;
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .headerPlacement {
@@ -15,7 +12,6 @@
 .mainContent {
     flex-grow: 1;
     display: flex;
-    /* flex-direction: column; */
 }
 
 .modelViewerContainer {
@@ -26,8 +22,10 @@
     height: 100%;
 }
 
+
+
 .modelDescriptionContainer {
-    /* Style for the description if needed */
+
     text-align: center;
-    transform: translateY(-100px); 
+    transform: translateY(20%); 
 }

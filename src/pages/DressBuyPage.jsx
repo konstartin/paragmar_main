@@ -48,7 +48,7 @@ const DressBuyPage = () => {
 
       {/* Header */}
       <header className={styles.headerArea}>
-        <ExtendHeader />
+        <ExtendHeader backPath='/dress'  />
       </header>
 
       {/* Left text section*/}

@@ -9,6 +9,15 @@
     flex: 1;
     position: relative;
     overflow: hidden;
+    transition: flex 0.3s ease-in-out; 
+}
+
+.pageContainer:hover > .backgroundOption {
+    flex: 1; 
+}
+
+.pageContainer > .backgroundOption:hover {
+    flex: 1.2; 
 }
 
 .backgroundVideo {

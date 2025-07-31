@@ -32,6 +32,10 @@ export function QuizProvider({ children }) {
       return null;
     }
   });
+  const [transitionState, setTransitionState] = useState({
+    isActive: false,
+    onComplete: null,
+  });
 
   const [isSoundOn, setIsSoundOn] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,16 +50,7 @@ export function QuizProvider({ children }) {
     }
   });
 
-//   const finalProduct = useMemo(
-//     () =>{
-//       console.log('useMemo is running. finalProductKey is:', finalProductKey); 
-//       (finalProductKey ? getObjectData(finalProductKey) : null),
-//     [finalProductKey]
-// });
-const finalProduct = useMemo(() => {
- 
-    console.log('useMemo is running. finalProductKey is:', finalProductKey);
-    
+const finalProduct = useMemo(() => { 
     if (!finalProductKey) return null;
 
     const productData = getObjectData(finalProductKey);
@@ -63,6 +58,18 @@ const finalProduct = useMemo(() => {
 
     return productData;
 }, [finalProductKey]);
+
+const triggerTransition = (onTransitionEndCallback) => {
+    setTransitionState({
+      isActive: true,
+      onComplete: () => {
+        if (onTransitionEndCallback) {
+          onTransitionEndCallback();
+        }
+        setTransitionState({ isActive: false, onComplete: null });
+      },
+    });
+  };
 
   useEffect(() => {
     if (selectedBackground) localStorage.setItem('selectedBackground', selectedBackground);
@@ -124,7 +131,12 @@ const finalProduct = useMemo(() => {
     viewMode,
     setViewMode,
     determineAndSetProduct,
+    transitionState,
+    triggerTransition,
   };
+
+  setViewMode
+  getProduct
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
 }

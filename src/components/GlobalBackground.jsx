@@ -104,6 +104,7 @@ const GlobalBackground = () => {
         '/question/10',
         '/question/11',
         '/question/12',
+        '/purchasecomplete',
     ];
 
     // Check if current page should show video background

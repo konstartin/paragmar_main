@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import styles from './ExtendHeader.module.css';
 import BackButton from './buttons/BackButton';
 import SoundButton from './buttons/SoundButton';
@@ -8,6 +9,9 @@ import logoSrc from '@/assets/questions/questionLogo.svg';
 import CountdownTimer from './CountdownTimer';
 
 export default function ExtendedHeader({ currentQuestionId, backPath }) {
+
+    const location = useLocation(); 
+
     return (
         <div className={styles.extendedHeaderContainer}>
             <div className={styles.leftWrapper}>
@@ -32,7 +36,7 @@ export default function ExtendedHeader({ currentQuestionId, backPath }) {
                     <NavButton text="[home]" path="/" />
                 </div>
                 <div className={styles.aboutButtonWrapper}>
-                    <NavButton text="[about]" path="/about" />
+                    <NavButton text="[about]" path="/about" navState={{ from: location.pathname }} />
                 </div>
                 <SoundButton />
             </div>

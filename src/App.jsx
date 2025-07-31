@@ -2,15 +2,19 @@ import React, { Suspense } from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
 
 import QuizLayout from './layouts/QuizLayout.jsx';
+import BackgroundSelectionPage from './pages/BackgroundSelectionPage';
 
 import WelcomePage from './pages/WelcomePage.jsx';
-const BackgroundSelectionPage = React.lazy(() => import('./pages/BackgroundSelectionPage'));
+// const BackgroundSelectionPage = React.lazy(() => import('./pages/BackgroundSelectionPage'));
 const QuestionPage = React.lazy(() => import('./pages/QuestionPage'));
 const DecodingPage = React.lazy(() => import('./pages/DecodingPage'));
 const DressPage = React.lazy(() => import('./pages/DressPage.jsx'));
 const DressBuyPage = React.lazy(() => import('./pages/DressBuyPage.jsx'));
+const CompletePurchase = React.lazy(() => import('./pages/CompletePurchase.jsx'));
 const AboutPage = React.lazy(() => import('./pages/AboutPage.jsx'));
 
+
+CompletePurchase
 
 const DecodingContent = React.lazy(() => import('./components/decoding/DecodingContent'));
 const ShowProduct = React.lazy(() => import('./components/decoding/ShowProduct'));
@@ -38,7 +42,8 @@ export default function App() {
             <Route path="showproduct" element={<ShowProduct />} />
           </Route>
           <Route path="/dress" element={<DressPage />} />
-          <Route path="/dressbuy" element={<DressBuyPage />} />
+          <Route path="/dressbuy" element={<DressBuyPage />}/>
+          <Route path="/purchasecomplete" element={<CompletePurchase />} />
           <Route path="/about" element={<AboutPage />} />
         </Route>
       </Routes>

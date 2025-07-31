@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -14,8 +14,8 @@
 .questionText {
   color: #FFF;
   text-align: center;
-  font-family: "Test Söhne Schmal";
-  font-size: 24px;
+  font-family: "Test Sohne Schmal";
+  font-size: 60px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -74,7 +74,7 @@
   color: #FFF;
   text-align: center;
   font-family: "Test Sohne Schmal";
-  font-size: 32px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

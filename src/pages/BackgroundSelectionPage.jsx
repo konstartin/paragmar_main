@@ -39,6 +39,7 @@ export default function BackgroundSelectionPage() {
                         Your browser does not support the video tag.
                     </video>
                     
+
                     <div className={styles.contentWrapper}>
                         <div className={styles.headerPlacement}>
                             <SimpleHeader  backPath="/" />

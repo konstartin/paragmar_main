@@ -13,7 +13,7 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
   const question = getQuestionConfig(questionIndex);
   const positions = question.positions;
   const config = getSplineConfig(questionIndex);
-
+  console.log('AnswerOptions', questionIndex, config);
   const handleSelect = (value) => {
     if (window.playSound) {
       window.playSound('select');

@@ -18,7 +18,7 @@ export default function AboutPage() {
 
    const location = useLocation();
    const previousPath = location.state?.from || '/';
-
+   console.log('Previous path:', previousPath);
   
 
   return (
@@ -39,7 +39,7 @@ export default function AboutPage() {
 
 We believe identity is fluid. Who you are today might not be who you are tomorrow — and that’s worth celebrating. Our site opens only from midnight to 3AM, when the world quiets down and the masks come off. That’s when you’re most likely to meet the real you.
 
-This isn’t just fashion — it’s your reflection in pixels and soul. Because there’s only one of you.`;
+This isn’t just fashion — it’s your reflection in pixels and soul. Because there’s only one of you.
 
         </p>
       </div>

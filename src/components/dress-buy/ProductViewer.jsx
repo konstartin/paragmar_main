@@ -55,14 +55,14 @@ export default function ProductViewer() {
 
   return (
     <div className={styles.viewerContainer}>
-      <Canvas camera={{ fov: 50, near: 0.01, far: 2000 }}>
+      <Canvas camera={{ fov: 50, near: 0.05, far: 2000, position: [0, 0,10] }}>
         <ambientLight intensity={1.5} />
         <directionalLight intensity={2.5} position={[5, 10, 7.5]} />
         <Suspense fallback={null}>
           {showAnimation ? (
             <AnimatedModel key={modeKey} url={animUrl} />
           ) : (
-            <StaticModel key={modeKey} url={staticUrl} />
+            <StaticModel key={modeKey} url={staticUrl}  />
           )}
         </Suspense>
         <OrbitControls makeDefault />

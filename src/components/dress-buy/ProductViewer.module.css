@@ -1,7 +1,7 @@
 
  .viewerContainer {
   position: relative;
-  width: 100%;
-  height: 100%;
-  transform: translateX(23%);
+  width: 120%;
+  height: 110%;
+  transform: translate(9.1%, -10%);
 }

@@ -39,7 +39,14 @@ export function QuizProvider({ children }) {
 
   const [isSoundOn, setIsSoundOn] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState(() => {
+  try {
+    const savedAnswers = localStorage.getItem('quizAnswers');
+    return savedAnswers ? JSON.parse(savedAnswers) : {};
+  } catch {
+    return {};
+  }
+});
   const [viewMode, setViewMode] = useState('animation');
 
   const [finalProductKey, setFinalProductKey] = useState(() => {
@@ -80,6 +87,10 @@ const triggerTransition = (onTransitionEndCallback) => {
     if (finalProductKey) localStorage.setItem('finalProductKey', finalProductKey);
     else localStorage.removeItem('finalProductKey');
   }, [finalProductKey]);
+
+  useEffect(() => {
+  localStorage.setItem('quizAnswers', JSON.stringify(answers));
+}, [answers]);
 
   const determineAndSetProduct = useCallback(() => {
     const answer10 = answers[10]?.label;

@@ -13,7 +13,7 @@ export default function QuestionPage() {
   const { id } = useParams();
   const indexFromUrl = Number(id);
 
-  const { selectedBackground, saveAnswer } = useQuiz();
+  const { selectedBackground, saveAnswer,answers } = useQuiz();
   const navigate = useNavigate();
 
   useEffect(() => {

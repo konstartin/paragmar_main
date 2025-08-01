@@ -7,8 +7,17 @@
     background: transparent;
     padding: 0;
     cursor: pointer;
+    transition: box-shadow 0.3s ease, opacity 0.2s ease;
 }
-  
+
+.startButton:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.startButton:active {
+    opacity: 0.5;
+
+}
 .buttonText {
     color: #FFF;
     text-align: center;

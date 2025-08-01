@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    padding: 34px 28px 0;
+    padding: 30px 28px 0;
     box-sizing: border-box;
     position: relative;
 }
@@ -51,7 +51,7 @@
     position: absolute;
     top:0;
     margin-top: 2px;
-    left : 150px;
+    left : 140px;
     flex-shrink: 0;
     color: #FFF;
     font-family: Helvetica;
@@ -66,14 +66,14 @@
 .logoImage {
     width: 114.065px;
     height: 32.626px;
-    transform: translateX(30%);
+    transform: translateX(20%);
 }
 
 .rightWrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 16px;
+    gap: 36px;
 }
 
 .homeButtonWrapper {

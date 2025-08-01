@@ -90,7 +90,6 @@ const GlobalBackground = () => {
     // Define pages where video background should be shown
     const allowedPages = [
         '/dress',
-        '/about',
         '/dressbuy',
         '/decoding',
         '/question/2',

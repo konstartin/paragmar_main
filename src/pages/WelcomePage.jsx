@@ -62,7 +62,7 @@ export default function WelcomePage() {
                 setIsHeadphonesPulsing(true);
                 setTextForTyping(SECOND_TEXT);
                 setTypingStage(2);
-            }, 1500);
+            }, 3000);
         } else {
             setTimeout(() => {
                 setIsHeadphonesPulsing(false);

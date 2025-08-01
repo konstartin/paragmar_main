@@ -32,7 +32,7 @@ export default function CountdownTimer() {
         const paddedSeconds = String(seconds).padStart(2, '0');
         const paddedMilliseconds = String(milliseconds).padStart(2, '0');
 
-        return `${paddedMinutes}:${paddedSeconds}.${paddedMilliseconds}`;
+        return `${paddedMinutes}:${paddedSeconds}:${paddedMilliseconds}`;
     };
     return (
         <div className={styles.timer}>

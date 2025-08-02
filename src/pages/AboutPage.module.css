@@ -2,20 +2,18 @@
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
-  
+  margin-top: -0.5%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translate(2%,35%);
 }
 
-/*  */
+
 .text {
   width: 621px;
   max-width: 100%;
@@ -28,7 +26,6 @@
   text-transform: uppercase;
   white-space: pre-line;
   text-align: left;
-  transform: translateY(20%);
 }
 
 .compositionContainer {
@@ -36,56 +33,13 @@
   display: flex;   
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 30px; */
 }
 
-.firstIcon {
-  width: 31.599px;
-  height: 95.762px;
+.logoIcon {
+  width: 431.599px;
+  height: 295.762px;
   flex-shrink: 0;
+  margin-bottom: -5%;
 }
 
-.secIcon {
-  width: 51.416px;
-  height: 94.982px;
-  flex-shrink: 0;
-}
-
-.thirdIcon {
-  width: 51.309px;
-  height: 96.982px;
-  flex-shrink: 0;
-}
-
-.fourthIcon {
-  width: 45.599px;
-  height: 95.762px;
-  flex-shrink: 0;
-}
-
-.fifthIcon {
-  width: 51.416px;
-  height: 94.982px;
-  flex-shrink: 0;
-}
-
-.sixthIcon {
-  width: 41.776px;
-  height: 94.982px;
-  flex-shrink: 0;
-}
-
-.trademark {
-  position: relative;
-  top: 0;
-  right: -10px;
-  color: #FFF;
-  font-family: 'Helvetica';
-  font-size: 16.458px;
-  font-weight: 100;
-  letter-spacing: 0.165px;
-  text-transform: uppercase;
-  height: 79px;
-
-}
 

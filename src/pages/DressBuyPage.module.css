@@ -11,11 +11,12 @@
 }
 
 .headerArea {
-  
+  margin-top: -1%;
 }
 
 .infoArea {
   margin-top: 4%;
+  margin-left: 0.8%;
 }
 
 
@@ -29,17 +30,9 @@
   pointer-events: none;
 }
 
-.viewerArea {
-  position: absolute;
-  width: 890.974px;
-  height: 952px;
-  transform: translate(39%, 10%);
-  transition: transform 0.5s ease-out;
-}
-
 
 .viewerArea.slideLeft {
-  transform: translate(-6%, 5%);
+  transform: translate(-20%, 5%);
 }
 
 .actionsArea {
@@ -50,11 +43,11 @@
   position: fixed;
   top: 95%;
   left: 95%;
-  transform: translate(-100%, -100%);
+  transform: translate(-86.5%, -27%);
   z-index: 10;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 60px;
   transition: opacity 0.5s ease-out;
  
 }

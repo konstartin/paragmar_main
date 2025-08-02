@@ -3,11 +3,11 @@ import styles from './ProductInfo.module.css';
 import { useQuiz } from '@/context/QuizContext';
 import AccordionItem from './AccordionItem';
 
-const ProductInfo = ({ clothingName }) => { // Добавили пропс clothingName
+const ProductInfo = ({ clothingName }) => { 
     const { getProduct, viewMode, setViewMode } = useQuiz();
     const productData = getProduct() || { title: 'CHILDHOOD ECHO' };
 
-    const [openSection, setOpenSection] = useState('description');
+    const [openSection, setOpenSection] = useState('null');
 
     const handleToggle = (sectionName) => {
         setOpenSection(prevOpenSection =>
@@ -21,7 +21,7 @@ const ProductInfo = ({ clothingName }) => { // Добавили пропс cloth
 
     return (
         <div className={styles.infoContainer}>
-            {/* ИЗМЕНИЛИ: используем clothingName вместо productData.title */}
+
             <h1 className={styles.title}>
                 {clothingName || productData.title}
             </h1>

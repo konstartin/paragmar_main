@@ -7,10 +7,12 @@
   box-sizing: border-box;
 }
 .centerBlock {
+   width: fit-content; 
+    max-width: 90%; 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -90%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,37 +35,36 @@ letter-spacing: 1px;
 .mainTitle {
   margin: 0 0 32px 0;
   font-size: 156px;
-  width: 745px;
+  /* width: 845px; */
   font-family: "Test Sohne Schmal";
   line-height: 0.95;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 
- .codeRow {
-  transform: translateY(-30px);
+.codeRow {
   width: 100%;
+  transform: translateY(-30px);
   display: flex;
   justify-content: space-between;
-  padding: 0 0px; 
   color: #FFF;
-font-family: "MD IO Trial";
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 25px; /* 125% */
-text-transform: uppercase;
+  font-family: "MD IO Trial";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+  text-transform: uppercase;
+  
 }
-
 .codeLeft {
   text-align: left;
-  transform: translateX(39px);
+  
 }
 
 .codeRight {
   text-align: right;
-  transform: translate(-40px,-5px);
+  
 }
 
 @keyframes fadeInAll {

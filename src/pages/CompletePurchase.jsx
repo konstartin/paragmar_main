@@ -24,7 +24,7 @@ const CompletePurchase = () => {
                 <p className={styles.subtitle}>{currentClothingData.id}</p>
 
                 <div className={styles.modelWrapper}>
-                    <ProductViewer />
+                    <ProductViewer scale={1.7}/>
                 </div>
 
                 <p className={styles.description}>

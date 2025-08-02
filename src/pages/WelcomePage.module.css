@@ -34,7 +34,7 @@
     height: 56px;
     margin-bottom: 2rem;
     opacity: 0;
-    transform: translate(85%, -250%);
+    transform: translate(35%, -250%);
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -48,7 +48,7 @@
 
 @keyframes pulse-headphones-continuous {
     0%, 100% {
-        opacity: 0.7;
+        opacity: 0.2;
     }
     50% {
         opacity: 1;
@@ -69,7 +69,7 @@
     width: 550px;
     max-width: 90%;
     min-height: 120px;
-    transform: translate(20%, -100%);
+    transform: translate(11%, -100%);
 }
 
 
@@ -77,7 +77,7 @@
     position: absolute;
     bottom: 20vh;
     left: 50%;
-    transform: translate(-35%,200%);
+    transform: translate(-45%,200%);
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
 }
@@ -88,11 +88,11 @@
 
 
 .firstIcon { width: 31.599px; height: 97.762px; }
-.secIcon { width: 51.416px; height: 94.982px; }
+.secIcon { width: 51.416px; height: 94.982px; margin-left: 6px; }
 .thirdIcon { width: 51.309px; height: 96.982px; }
 .fourthIcon { width: 45.599px; height: 97.762px; }
 .fifthIcon { width: 51.416px; height: 94.982px; }
-.sixthIcon { width: 45.776px; height: 94.982px; padding-left: 4px; }
+.sixthIcon { width: 40.776px; height: 94.982px; margin-left: 6px; }
 .progressText { position: absolute; bottom: -27px; right: 0px; color: #FFF; font-family: 'MD IO Trial'; font-size: 20px; text-transform: uppercase; text-align: right; width: 54px; }
 .trademark { position: relative; top: 0; right: -10px; color: #FFF; font-family: 'Helvetica'; font-size: 16.458px; font-weight: 100; letter-spacing: 0.165px; text-transform: uppercase; height: 79px; }
 .loadingText { position: absolute; bottom: -34px; left: 0; color: #FFF; font-family: 'MD IO Trial'; font-size: 20px; text-transform: uppercase; }

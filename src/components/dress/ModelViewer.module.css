@@ -1,6 +1,16 @@
 .canvasContainer {
-    margin-top: 5%;
-    width: 722.513px;
-    height: 672px;
-    flex-shrink: 0;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52.5%);
+  width: 110vmin;
+  height: 180vmin;
+}
+
+.viewerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110vmin;
+  height: 180vmin;
 }

@@ -1,24 +1,28 @@
- .extendedHeaderContainer {
+.extendedHeaderContainer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
-    padding: 30px 28px 0;
+    padding: 16px 32px;
     box-sizing: border-box;
-    position: relative;
 }
 
-.leftWrapper {
+
+.leftSection {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 6px;
+    padding-top: 1.5%;
 }
 
 .shutdownMessage {
     display: flex;
-    align-items: center;
-    gap: 2em;
+    align-items: baseline;
+    gap: 8px;
+    
 }
+
 
 .shutdownText {
     color: rgba(255, 255, 255, 0.50);
@@ -28,30 +32,19 @@
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
-    
+    margin-right: 25px;
 }
 
-.timerWrapper {
-    height: 22px;
+.centerSection {
+    position: relative;
+    transform: translate(-30px,-5px); 
 }
 
-.backButtonWrapper {
-    transform: translate(-3px, 10px);
-}
-
-.logoWrapper {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-10px);
-    display: flex;
-    justify-content: center;
-}
 
 .trademark {
     position: absolute;
-    top:0;
-    margin-top: 2px;
-    left : 140px;
+    top: 3.5px; 
+    right: -10px; 
     flex-shrink: 0;
     color: #FFF;
     font-family: Helvetica;
@@ -63,25 +56,9 @@
     text-transform: uppercase;
 }
 
-.logoImage {
-    width: 114.065px;
-    height: 32.626px;
-    transform: translateX(20%);
-}
 
-.rightWrapper {
+.rightSection {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 36px;
-}
-
-.homeButtonWrapper {
-    width: 72px;
-    height: 24px;
-}
-
-.aboutButtonWrapper {
-    width: 84px;
-    height: 24px;
+    gap: 24px;
 }

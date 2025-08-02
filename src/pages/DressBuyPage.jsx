@@ -60,7 +60,7 @@ const DressBuyPage = () => {
 
       {/* 3D Viewer - with slide left animation when checkout opens */}
       <main className={`${styles.viewerArea} ${isCheckoutOpen ? styles.slideLeft : ''}`}>
-        <ProductViewer />
+        <ProductViewer  />
       </main>
 
       {/* Footer */}

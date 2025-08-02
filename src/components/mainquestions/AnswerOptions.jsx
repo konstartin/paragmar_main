@@ -40,6 +40,7 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
         >
           {top.label}
         </button>
+
         <img src={layerSvg} className={styles.divider} alt="Divider" />
         <button
           className={`${styles.option} ${selected === bottom.value ? styles.selected : ''}`}

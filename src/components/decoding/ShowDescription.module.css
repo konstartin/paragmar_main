@@ -15,19 +15,23 @@
   color: #FFF;
   font-family: "Test Sohne Schmal";
   font-size: 80px; 
-  font-weight: 600;
+  font-weight: 400;
   line-height: 100px; 
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.leftTopId{
+  margin-top: -10px;
 }
 
 .centerTyping {
 
   width: 468px;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 38%;
-  transform: translateX(8%);
+  transform: translateX(5%);
   white-space: pre-line;
   max-width: 60%; 
   color: rgba(255, 255, 255, 1);
@@ -41,9 +45,9 @@
 
 .bottomButton {
   position: absolute;
-  bottom: 12.5%;
-  left: 43%;
-  /* transform: translateX(-30%); */
+  bottom: 12%;
+  left: 42%;
+
   width: 310px;
   height: 60px;
   border-radius: 20px;
@@ -75,8 +79,7 @@
 
 .bottomRight {
   position: absolute;
-  bottom: 10.5%;
-  
+  bottom:10%;
   right: 1.2%;   
   width: 327px;
   height: 81px;

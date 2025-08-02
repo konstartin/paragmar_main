@@ -91,7 +91,8 @@ const GlobalBackground = () => {
     const allowedPages = [
         '/dress',
         '/dressbuy',
-        '/decoding',
+        '/decoding/showdescription',
+        '/decoding/showproduct',
         '/question/2',
         '/question/3',
         '/question/4',

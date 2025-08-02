@@ -8,43 +8,39 @@ import NavButton from './buttons/NavButton';
 import logoSrc from '@/assets/questions/questionLogo.svg';
 import CountdownTimer from './CountdownTimer';
 import { useQuiz } from '@/context/QuizContext';
-export default function ExtendedHeader({ currentQuestionId, backPath }) {
 
-    const location = useLocation(); 
-    const { resetQuiz} = useQuiz();
+export default function ExtendedHeader({ currentQuestionId, backPath }) {
+    const location = useLocation();
+    const { resetQuiz } = useQuiz();
+
     const handleHomeClick = () => {
         resetQuiz();
-        
     };
 
     return (
         <div className={styles.extendedHeaderContainer}>
-            <div className={styles.leftWrapper}>
+
+            <div className={styles.leftSection}>
                 <div className={styles.shutdownMessage}>
-                    <div className={styles.shutdownText}>
-                        Site shuts down in
-                    </div>
-                    <div className={styles.timerWrapper}>
-                        <CountdownTimer key={currentQuestionId}/>
-                    </div>
+                    <span className={styles.shutdownText}>Site shuts down in</span>
+                    <CountdownTimer key={currentQuestionId} />
                 </div>
-                <div className={styles.backButtonWrapper}>
-                    <BackButton path={backPath} />
-                </div>
+                <BackButton path={backPath} />
             </div>
-            <div className={styles.logoWrapper}>
+
+           
+            <div className={styles.centerSection}>
                 <img src={logoSrc} alt="Logo" className={styles.logoImage} />
                 <div className={styles.trademark}>TM</div>
-           </div>
-            <div className={styles.rightWrapper}>
-                <div className={styles.homeButtonWrapper}>
-                    <NavButton text="[home]" path="/" onClick={handleHomeClick} />
-                </div>
-                <div className={styles.aboutButtonWrapper}>
-                    <NavButton text="[about]" path="/about" navState={{ from: location.pathname }} />
-                </div>
+            </div>
+
+          
+            <div className={styles.rightSection}>
+                <NavButton text="[home]" path="/" onClick={handleHomeClick} />
+                <NavButton text="[about]" path="/about" navState={{ from: location.pathname }} />
                 <SoundButton />
             </div>
+            
         </div>
     );
 }

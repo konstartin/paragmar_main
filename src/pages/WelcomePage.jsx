@@ -5,7 +5,7 @@ import styles from './WelcomePage.module.css';
 import { useProgressAnimation } from '../hooks/useProgressAnimation';
 import { useTypingAnimation } from '../hooks/useTypingAnimation';
 import SelectionButton from '../components/SelectionButton';
-
+import ExtendedHeader from '../components/Headers/ExtendHeader';
 // Import SVGs
 import FirstIcon from '../assets/loadingpage/first.svg';
 import SecIcon from '../assets/loadingpage/sec.svg';
@@ -83,6 +83,7 @@ export default function WelcomePage() {
 
     return (
         <div className={styles.loader}>
+            
             {currentScreen === 'loading' && <LoadingView progress={progress} />}
 
             {currentScreen === 'typing' && (

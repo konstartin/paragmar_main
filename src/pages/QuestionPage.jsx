@@ -16,11 +16,11 @@ export default function QuestionPage() {
   const { selectedBackground, saveAnswer,answers } = useQuiz();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!selectedBackground) {
-      navigate('/question/1');
-    }
-  }, [selectedBackground, navigate]);
+  // useEffect(() => {
+  //   if (!selectedBackground) {
+  //     navigate('/question/1');
+  //   }
+  // }, [selectedBackground, navigate]);
 
   const handleAnswerSelect = (questionIndex, answer) => {
     saveAnswer(questionIndex, answer);

@@ -95,14 +95,10 @@ const triggerTransition = (onTransitionEndCallback) => {
   const determineAndSetProduct = useCallback(() => {
     const answer10 = answers[10]?.label;
     const answer12 = answers[12]?.label;
-    console.log('Answer 10.label:', answer10);
-    console.log('Answer 12.label:', answer12);
-    console.log('Answer 10:', answers[10]);
-    console.log('Answer 12:', answers[12]);
+   
     let productKey = 'warrior';
     if (answer10 && answer12) {
       const determinedKey = productLogicMap[answer10]?.[answer12];
-      console.log('Determined Key:', determinedKey);
       if (determinedKey) productKey = determinedKey;
     }
     setFinalProductKey(productKey);
@@ -146,8 +142,7 @@ const triggerTransition = (onTransitionEndCallback) => {
     triggerTransition,
   };
 
-  setViewMode
-  getProduct
+
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
 }

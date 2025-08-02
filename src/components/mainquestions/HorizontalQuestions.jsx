@@ -27,6 +27,12 @@ export default function HorizontalQuestions({ questionIndex, onAnswer }) {
         onAnswer(questionIndex, { label, value: label });
     };
 
+    const handleMouseEnter = () => {
+    if (window.playSound) {
+      window.playSound('hover');
+    }
+  };
+
     return (
         <div className={styles.container}>
             <div className={styles.options}>
@@ -35,6 +41,7 @@ export default function HorizontalQuestions({ questionIndex, onAnswer }) {
                         <button
                             className={`${styles.option} ${selected?.value === option ? styles.selected : ''}`}
                             onClick={() => handleSelect(option)}
+                            onMouseEnter={handleMouseEnter}
                         >
                             {option}
                         </button>

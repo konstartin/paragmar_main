@@ -5,16 +5,16 @@ import { OrbitControls, useGLTF, useAnimations, Bounds } from '@react-three/drei
 import { useQuiz } from '@/context/QuizContext';
 import styles from './ProductViewer.module.css';
 
-function StaticModel({ url }) {
+function StaticModel({ url,scale }) {
   const { scene } = useGLTF(url);
   return (
-    <Bounds fit clip observe margin={1.2}>
-      <primitive object={scene} />
+    <Bounds fit clip observe margin={scale}>
+        <primitive object={scene} />
     </Bounds>
   );
 }
 
-function AnimatedModel({ url, clipName }) {
+function AnimatedModel({ url, clipName,scale }) {
   const group = useRef();
   const { scene, animations } = useGLTF(url);
   const { actions, names } = useAnimations(animations, group);
@@ -31,14 +31,14 @@ function AnimatedModel({ url, clipName }) {
 
   return (
     <group ref={group}>
-      <Bounds fit clip observe margin={1.2}>
+      <Bounds fit clip observe margin={scale}>
         <primitive object={scene} />
       </Bounds>
     </group>
   );
 }
 
-export default function ProductViewer() {
+export default function ProductViewer({ scale = 1.2 }) {
   const { viewMode, getProduct } = useQuiz();
   const product = getProduct();
 
@@ -60,9 +60,9 @@ export default function ProductViewer() {
         <directionalLight intensity={2.5} position={[5, 10, 7.5]} />
         <Suspense fallback={null}>
           {showAnimation ? (
-            <AnimatedModel key={modeKey} url={animUrl} />
+            <AnimatedModel key={modeKey} url={animUrl} scale={scale} />
           ) : (
-            <StaticModel key={modeKey} url={staticUrl}  />
+            <StaticModel key={modeKey} url={staticUrl} scale={scale} />
           )}
         </Suspense>
         <OrbitControls makeDefault />

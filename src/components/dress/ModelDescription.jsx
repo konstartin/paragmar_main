@@ -7,7 +7,7 @@ const ModelDescription = () => {
   const product = getProduct();
 
   return (
-    <div>
+    <div className='model-description'>
       <p>
         <span className={styles.title}>
           {product.id}

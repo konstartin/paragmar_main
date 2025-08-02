@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: -10px; 
-  transform: translateX(3.5%);
+
 }
 
 .title {
@@ -38,12 +38,12 @@
 }
 
 .modelWrapper {
-  width: 812.077px;
-  height: 854px;
+  width: 712.077px;
+  height: 754px;
   aspect-ratio: 73 / 78;
   flex-shrink: 0;
-  transform: translateX(-21%);
-  margin-bottom: -16%;
+  margin-bottom: -10%;
+  transform: translateY(-3%);
 }
 
 
@@ -56,7 +56,7 @@
   font-weight: 400;
   line-height: 25px;
   text-transform: uppercase;
-  transform: translateY(42%);
+  transform: translateY(30%);
 }
 
 .goButton {
@@ -73,11 +73,11 @@
   line-height: 25px;
   text-transform: uppercase;
   cursor: pointer;
-  transform: translateX(-20%);
+  transform: translateX(-29%);
   border-radius: 20px;
   border: 1px solid #FFF;
   background: rgba(0, 0, 0, 0.10);
-  margin-top: 10px;
+  margin-top: 5px;
   
 }
 
@@ -107,6 +107,7 @@
   flex-direction: column;
   gap: 16px;
   align-items: flex-end;
+  margin-top: 10px;
 }
 
 .rightItem {

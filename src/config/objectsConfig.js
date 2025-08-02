@@ -103,7 +103,7 @@ const objectsData = {
     },
   },
 
-  voids: {
+  void: {
     title: 'The Void',
     clothingName: 'Voidskin', // Display name for clothing
     id: '[void//0593]',

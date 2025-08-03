@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import layerHSvg from '@/assets/questions/Layer_H.svg';
 import styles from './HorizontalQuestions.module.css';
 

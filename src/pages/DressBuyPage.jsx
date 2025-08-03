@@ -10,11 +10,12 @@ import PriceDisplay from '@/components/dress-buy/PriceDisplay';
 import Checkout from '@/components/checkout/Checkout';
 import { useQuiz } from '@/context/useQuiz.js';
 import { getObjectData } from '@/config/objectsConfig';
+import layerHSvg from '@/assets/questions/Layer_H.svg';
 
 const DressBuyPage = () => {
-  const { selectedBackground, getProduct } = useQuiz();
+  const { selectedBackground, getProduct,setViewMode } = useQuiz();
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-
+  setViewMode('animation');
   // Same logic as DressPage - that's it!
   const currentClothingData = getProduct();
 
@@ -48,7 +49,7 @@ const DressBuyPage = () => {
 
       {/* Header */}
       <header className={styles.headerArea}>
-        {/* <ExtendHeader backPath='/dress'  /> */}
+        <ExtendHeader backPath='/dress'  />
       </header>
 
       {/* Left text section*/}
@@ -73,6 +74,7 @@ const DressBuyPage = () => {
             priceETH={clothingInfo.priceETH}
             cryptoSymbol={clothingInfo.cryptoSymbol}
           />
+          <img src={layerHSvg} alt="Layer H" className={styles.separatorLine} />
           <LooksGoodButton
             onLooksGood={handleLooksGoodClick}
             onStartOver={handleStartOverClick}

@@ -215,15 +215,19 @@
 }
 
 .radioInner {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: white;
-    transition: opacity 0.2s;
+    background-color: transparent; 
+    transition: background-color 0.2s ease-in-out;
 }
 
-.radioOuter:hover .radioInner {
-    opacity: 0.8;
+.paymentOption:hover .radioInner {
+  background-color: white;
+}
+
+.paymentOption.selected .radioInner {
+  background-color: white;
 }
 
 .buttonContainer{

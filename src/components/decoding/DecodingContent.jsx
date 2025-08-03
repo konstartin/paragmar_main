@@ -127,8 +127,7 @@
 //   );
 // }
 import React, { useState, useEffect, useMemo } from 'react';
-import { useQuiz } from '@/context/QuizContext';
-import { useNavigate } from 'react-router-dom';
+import { useQuiz } from '@/context/useQuiz.js';import { useNavigate } from 'react-router-dom';
 import styles from './DecodingContent.module.css';
 
 const TYPING_SPEED_MS = 30; 
@@ -236,7 +235,7 @@ export default function DecodingContent() {
       <section className={styles.centerSection}>
         <div className={styles.titleContainer}>
           <h1 className={styles.title}>DECODING</h1>
-          <h1 className={styles.title}>ALTEREGO</h1>
+          <h1 className={styles.title}>ALTER EGO</h1>
         </div>
       </section>
 

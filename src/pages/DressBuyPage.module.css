@@ -15,7 +15,7 @@
 }
 
 .infoArea {
-  margin-top: 4%;
+  margin-top: 3%;
   margin-left: 0.8%;
 }
 
@@ -67,6 +67,13 @@
   height: 100vh;
   z-index: 1000;
   animation: slideInFromRight 0.3s ease-out;
+}
+
+.separatorLine {
+    height: 50px;
+    width: 1px;
+    width: auto;
+    
 }
 
 

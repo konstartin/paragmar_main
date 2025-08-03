@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { useQuiz } from '@/context/QuizContext';
-import ExtendedHeader from '@/components/Headers/ExtendHeader';
+import { useQuiz } from '@/context/useQuiz.js';import ExtendedHeader from '@/components/Headers/ExtendHeader';
 import InstructionOverlay from '../components/InstructionOverlay';
 import AnswerOptions from '@/components/mainquestions/AnswerOptions';
 import HorizontalQuestions from '@/components/mainquestions/HorizontalQuestions';
@@ -16,11 +15,6 @@ export default function QuestionPage() {
   const { selectedBackground, saveAnswer,answers } = useQuiz();
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (!selectedBackground) {
-  //     navigate('/question/1');
-  //   }
-  // }, [selectedBackground, navigate]);
 
   const handleAnswerSelect = (questionIndex, answer) => {
     saveAnswer(questionIndex, answer);

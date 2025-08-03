@@ -3,6 +3,7 @@ import styles from './MetaMaskForm.module.css';
 import metamaskIcon from '../../assets/icons/metamask.png'; // Добавляем импорт иконки
 import { useNavigate } from 'react-router-dom';
 
+
 const MetaMaskForm = ({ amountETH = 0.014, cryptoSymbol = 'ETH', onPay, onChangeMethod, onClose }) => {
     // Pre-filled Ethereum address as shown in the design
     const [ethereumAddress, setEthereumAddress] = useState('1BMLTXMEVE99TMHJFSZJHQH');

@@ -1,7 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { useQuiz } from '@/context/QuizContext';
-import { useNavigate } from 'react-router-dom';
+import { useQuiz } from '@/context/useQuiz.js';import { useNavigate } from 'react-router-dom';
 
 import styles from './ShowProduct.module.css';
 
@@ -25,7 +24,6 @@ export default function ShowProduct() {
   useEffect(() => {
     const soundTimer = setTimeout(() => {
       if (window.playSound) {
-        // console.log('Playing dress sound...');
         window.playSound('dressSound');
       } else {
         console.log('playSound not available');

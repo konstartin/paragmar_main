@@ -38,8 +38,7 @@
 // }
 import React, { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuiz } from '@/context/QuizContext';
-import styles from './AnswersSidebar.module.css';
+import { useQuiz } from '@/context/useQuiz.js';import styles from './AnswersSidebar.module.css';
 
 export default function AnswersSidebar() {
   const { answers } = useQuiz();

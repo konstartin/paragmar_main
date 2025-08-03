@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ExtendHeader from '@/components/Headers/ExtendHeader';
 import ModelViewer from '@/components/dress/ModelViewer';
 import ModelDescription from '@/components/dress/ModelDescription';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import styles from './DressPage.module.css';
 
 

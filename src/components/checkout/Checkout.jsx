@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Checkout.module.css';
+import { useNavigate } from 'react-router-dom';
+
 
 import metamaskIcon from '../../assets/icons/metamask.png';
 import visaIcon from '../../assets/icons/visa.png'; // Import visa icon
@@ -18,6 +20,7 @@ const Checkout = ({
     onClose
 }) => {
     const { quizResults, selectedObjectType } = useQuiz();
+    const navigate = useNavigate();
 
     // Determine current clothing type based on quiz results
     const getCurrentClothingType = () => {
@@ -84,6 +87,10 @@ const Checkout = ({
             onClose();
         }
     };
+
+    const handleSelection = () => {
+        navigate('/purchasecomplete');
+    }
 
     return (
         <div className={styles.checkoutContainer}>
@@ -153,7 +160,7 @@ const Checkout = ({
                         </div>
                         <span className={styles.paymentText}>DEBIT/ CREDIT CARD</span>
                         <div className={styles.radioOuter}>
-                            {selectedMethod === 'card' && <div className={styles.radioInner} />}
+                            <div className={styles.radioInner} />
                         </div>
                     </div>
 
@@ -165,7 +172,7 @@ const Checkout = ({
                         <img className={styles.metamaskIcon} src={metamaskIcon} alt="MetaMask" />
                         <span className={styles.paymentText}>METAMASK</span>
                         <div className={styles.radioOuter}>
-                            {selectedMethod === 'metamask' && <div className={styles.radioInner} />}
+                            <div className={styles.radioInner} />
                         </div>
                     </div>
                 </>
@@ -175,7 +182,7 @@ const Checkout = ({
             <SelectionButton
                 className={styles.payButton}
                 text={isCardFormVisible ? `PAY $${dynamicPriceUSD}` : `PAY ${dynamicPriceCrypto} ${dynamicCryptoSymbol}`}
-                onClick={() => handleSelection(id, config.label)}
+                onClick={() => handleSelection()}
             />
             </div>
             )}

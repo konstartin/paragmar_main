@@ -17,11 +17,13 @@ import voidDynamic from '../assets/3dobjects/void.glb?url';
 import childStatic from '../assets/3dobjects/eternial_child_static.glb?url';
 import childDynamic from '../assets/3dobjects/eternal_child.glb?url';
 
+
+
 const objectsData = {
   eternal_child: {
     title: 'The Eternal Child',
     clothingName: 'Childhood Echo', // Display name for clothing
-    id: '[child_hood//1234]',
+    id: '[ETERNALCHILD//0162]',
     description: 'This garment was born from your choices. When worn by\n your avatar, it activates the qualities of The Eternal\n Child: playful spirit, fluid curiosity, and gentle wonder.',
     format: 'GLB, Animated',
     'technical specs': 'Polygons: 45,000, Textures: 2K PBR',

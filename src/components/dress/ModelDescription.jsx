@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './ModelDescription.module.css';
-import { useQuiz } from '@/context/QuizContext';
-
+import { useQuiz } from '@/context/useQuiz.js';
 const ModelDescription = () => {
   const { getProduct } = useQuiz();
   const product = getProduct();

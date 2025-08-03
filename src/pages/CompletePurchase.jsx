@@ -3,7 +3,7 @@ import React from 'react';
 import ExtandHeader from '@/components/Headers/ExtendHeader';
 import ProductViewer from '@/components/dress-buy/ProductViewer';
 import styles from './CompletePurchase.module.css';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import downladIcon from '@/assets/icons/download.svg';
 import shareIcon from '@/assets/icons/share.svg';
 

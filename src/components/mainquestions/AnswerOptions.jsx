@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import layerSvg from '@/assets/questions/Layer.svg';
 import { getQuestionConfig } from '@/config/QuestionPageConfig';
 import { getSplineConfig } from '@/config/splineConfig';

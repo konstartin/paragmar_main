@@ -4,8 +4,7 @@ import React, { Suspense, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Bounds } from '@react-three/drei';
-import { useQuiz } from '@/context/QuizContext';
-import styles from './ModelViewer.module.css';
+import { useQuiz } from '@/context/useQuiz.js';import styles from './ModelViewer.module.css';
 
 
 function FadingModel({ url }) {

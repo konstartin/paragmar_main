@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import ExtendedHeader from '@/components/Headers/ExtendHeader';
 import styles from './DecodingPage.module.css';
 

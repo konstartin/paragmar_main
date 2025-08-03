@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './DressBuyPage.module.css';
 
 import ExtendHeader from '@/components/Headers/ExtendHeader';
@@ -15,11 +15,10 @@ import layerHSvg from '@/assets/questions/Layer_H.svg';
 const DressBuyPage = () => {
   const { selectedBackground, getProduct,setViewMode } = useQuiz();
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-  setViewMode('animation');
-  // Same logic as DressPage - that's it!
+
   const currentClothingData = getProduct();
 
-  // Extract pricing and info from the SAME source as DressPage
+  
   const clothingInfo = {
     clothingName: currentClothingData?.clothingName || 'Unknown Item',
     priceUSD: currentClothingData?.price?.usd || 0,
@@ -27,6 +26,10 @@ const DressBuyPage = () => {
     cryptoSymbol: currentClothingData?.price?.cryptoSymbol || 'ETH'
   };
 
+
+   useEffect(() => {
+    setViewMode('animation'); 
+  }, []);
 
   // Handle "Looks Good" button click - open checkout with animation
   const handleLooksGoodClick = () => {

@@ -45,7 +45,7 @@ const TEXTS = [
           } else {
             setButtonEnabled(true);
           }
-        }, 1500);
+        }, 3000);
       }
     }, perCharDelay);
 
@@ -61,7 +61,7 @@ const TEXTS = [
     <div className={styles.wrapper}>
       <div className={styles.leftTop}>
         <div className={styles.leftTopTitle}>{title}</div>
-        <div className={styles.leftTopId}>{idClean}</div>
+        <div className={styles.leftTopId}><span className={styles.idPrefix}>//</span>{idClean.slice(2)}</div>
       </div>
 
       <div className={styles.centerTyping}>

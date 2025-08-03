@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './SoundButton.module.css';
 import soundGif from '@/assets/questions/soundOn.gif';
 import { useQuiz } from '@/context/useQuiz.js';
+import soundOff from '@/assets/icons/soundOff.svg';
 
 export default function SoundButton() {
     const { isSoundOn, setIsSoundOn } = useQuiz();
@@ -13,11 +14,13 @@ export default function SoundButton() {
     return (
         <div className={styles.soundButtonContainer}>
             <button onClick={toggleSound} className={styles.onButton}>
-                ON
+                {isSoundOn ? 'ON' : 'OFF'}
             </button>
-            {isSoundOn && (
-                <img src={soundGif} alt="Sound is on" className={styles.soundGif} />
-            )}
+            <img
+                src={isSoundOn ? soundGif : soundOff}
+                alt={isSoundOn ? "Sound is on" : "Sound is off"} 
+                className={styles.soundGif}
+            />
         </div>
     );
 }

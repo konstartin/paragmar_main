@@ -10,7 +10,7 @@
 
 .leftTop {
   position: absolute;
-  top: 3.25%;  
+  top: 2.55%;  
   left: 1.15%;  
   color: #FFF;
   font-family: "Test Sohne Schmal";
@@ -23,6 +23,11 @@
 
 .leftTopId{
   margin-top: -10px;
+}
+
+.idPrefix{
+  font-size: 85px;
+  font-weight: 950;
 }
 
 .centerTyping {

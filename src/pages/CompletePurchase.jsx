@@ -6,9 +6,12 @@ import styles from './CompletePurchase.module.css';
 import { useQuiz } from '@/context/useQuiz.js';
 import downladIcon from '@/assets/icons/download.svg';
 import shareIcon from '@/assets/icons/share.svg';
+import { useNavigate } from 'react-router-dom';
+    
 
 const CompletePurchase = () => {
     const {  setViewMode, getProduct } = useQuiz();
+    const navigate = useNavigate();
     setViewMode('3d');
     const currentClothingData = getProduct();
     console.log('Current Clothing Data:', currentClothingData);
@@ -39,7 +42,7 @@ const CompletePurchase = () => {
                     Access key delivered.<br />
                     Check your inbox — your [01]of outfit now belongs to you.
                 </div>
-                <button className={styles.goButton}>GO!</button>
+                <button className={styles.goButton} onClick={()=>{navigate('/final')}}>GO!</button>
                 <div className={styles.rightSection}>
                     <div className={styles.rightItem}>
 

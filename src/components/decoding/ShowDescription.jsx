@@ -46,7 +46,7 @@ const TEXTS = [
           } else {
             setButtonEnabled(true);
           }
-        }, 3000);
+        }, 8000);
       }
     }, perCharDelay);
 
@@ -69,14 +69,6 @@ const TEXTS = [
         {typed}
       </div>
 
-      {/* <button
-        className={`${styles.bottomButton} ${buttonEnabled ? styles.btnEnabled : styles.btnDisabled}`}
-        onClick={handleButtonClick}
-        disabled={!buttonEnabled}
-      >
-        REVEAL MY OUTFIT
-      </button> */}
-
        <div className={styles.bottomButton}>
             <SelectionButton
                 text=" REVEAL MY OUTFIT"
@@ -84,8 +76,6 @@ const TEXTS = [
             />
         </div>
 
-
-      {/* <SelectionButton/> */}
       <div className={styles.bottomRight}>
         YOUR PERSONALITY IS ONE OF MANY. <br />
         YOUR ALTER EGO IS A REFLECTION OF THE DEEPEST LAYERS YOUR SOUL.

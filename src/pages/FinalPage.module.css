@@ -1,0 +1,77 @@
+/* pages/FinalPage.module.css */
+
+.pageContainer {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    /* fallback */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Video background - С ВАШИМ z-index: 0 */
+.videoBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    /* ВАШЕ ИСПРАВЛЕНИЕ */
+}
+
+/* Header area - ПОВЕРХ ВСЕГО */
+.headerArea {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Typing container - ПОВЕРХ ВИДЕО */
+.typingContainer {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 90%;
+  max-width: 1200px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 100;
+}
+
+/* Typing text - КАК В WELCOMEPAGE */
+.typingText {
+    color: #FFF;
+    
+    font-family: "MD IO Trial";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 110;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+}
+
+/* Pulse animation - КАК В WELCOMEPAGE */
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}

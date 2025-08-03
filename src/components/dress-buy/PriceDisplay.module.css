@@ -13,19 +13,23 @@
     gap: 6px;
 
     color: white;
-    font-family: 'MD IO Trial', sans-serif;
+    font-family: 'Test Sohne Schmal';
+    font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.5px;
 }
 
 .usdPrice {
     color: white;
-    font-size: 32px;
+    font-size: 40px;
 
     font-weight: 700;
 }
 
 .separator {
     color: white;
-    font-size: 32px;
+    font-size: 40px;
 
     margin: 0 2px;
 
@@ -33,13 +37,13 @@
 
 .ethPrice {
     color: white;
-    font-size: 32px;
+    font-size: 40px;
 
     font-weight: 600;
 }
 
 .diamondSvg {
-    height: 24px;
+    height: 40x;
 
     width: auto;
     margin-left: 8px;

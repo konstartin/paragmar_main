@@ -5,8 +5,8 @@
  * Each key is a question ID, and the value is the configuration object for displaying the scene.
  * URLs now point to local files in the `/public` directory.
  */
-import scene3 from '@/assets/3dobjects/scene2.splinecode?url';
-import scene2 from '@/assets/3dobjects/scene3.splinecode?url';
+import scene2 from '@/assets/3dobjects/scene2.splinecode?url';
+import scene3 from '@/assets/3dobjects/scene3.splinecode?url';
 import scene4 from '@/assets/3dobjects/scene4.splinecode?url';
 import scene5 from '@/assets/3dobjects/scene5.splinecode?url';
 import scene6 from '@/assets/3dobjects/scene6.splinecode?url';
@@ -17,6 +17,7 @@ import scene9 from '@/assets/3dobjects/scene9.splinecode?url';
 export const SPLINE_CONFIGS = {
     2: {
         url: scene2,
+        
         name: 'רורשאך1',
     },
     3: {

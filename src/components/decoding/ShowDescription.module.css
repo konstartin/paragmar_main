@@ -26,8 +26,9 @@
 }
 
 .idPrefix{
+  width: 120%;
   font-size: 85px;
-  font-weight: 950;
+  /* font-weight: 950; */
 }
 
 .centerTyping {
@@ -50,7 +51,7 @@
 
 .bottomButton {
   position: absolute;
-  bottom: 12%;
+  bottom: 14%;
   left: 42%;
 
   width: 310px;
@@ -84,7 +85,7 @@
 
 .bottomRight {
   position: absolute;
-  bottom:10%;
+  bottom:12%;
   right: 1.2%;   
   width: 327px;
   height: 81px;

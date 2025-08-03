@@ -56,9 +56,12 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
   return (
     <div className={styles.container}>
       <div className={styles.questionsWrapper}>
+     
         {buildColumn('leftTop', 'leftBottom', styles.leftColumn)}
         {buildColumn('rightTop', 'rightBottom', styles.rightColumn)}
+        
       </div>
+
       <div className={styles.modelWrapper}>
         <SplineScene config={config} />
       </div>

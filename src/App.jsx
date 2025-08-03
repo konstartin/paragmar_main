@@ -12,7 +12,7 @@ const DressPage = React.lazy(() => import('./pages/DressPage.jsx'));
 const DressBuyPage = React.lazy(() => import('./pages/DressBuyPage.jsx'));
 const CompletePurchase = React.lazy(() => import('./pages/CompletePurchase.jsx'));
 const AboutPage = React.lazy(() => import('./pages/AboutPage.jsx'));
-
+const FinalPage = React.lazy(() => import('./pages/FinalPage.jsx'));
 
 CompletePurchase
 
@@ -44,7 +44,9 @@ export default function App() {
           <Route path="/dress" element={<DressPage />} />
           <Route path="/dressbuy" element={<DressBuyPage />}/>
           <Route path="/purchasecomplete" element={<CompletePurchase />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element  ={<AboutPage />} />
+          <Route path="/final" element={<FinalPage />} />
+         
         </Route>
       </Routes>
     </Suspense>

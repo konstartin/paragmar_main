@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './ProductInfo.module.css';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import AccordionItem from './AccordionItem';
 
 const ProductInfo = ({ clothingName }) => { 

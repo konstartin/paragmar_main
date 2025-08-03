@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import { useQuiz } from '../context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import soundFile from '../assets/mp3/backgroundSound.mp3?url';
 import styles from './QuizLayout.module.css';
 

@@ -13,6 +13,7 @@
     margin-left: auto;
     font-family: 'Test Söhne Schmal';
     box-sizing: border-box;
+    padding: 10px 6% 10px 6%;
 }
 
 .header {
@@ -25,10 +26,10 @@
 
 .title {
     color: #FFF;
-    font-family: "Test Söhne Schmal";
+    font-family: "Test Sohne Schmal";
     font-size: 50px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
     margin: 0;
@@ -37,6 +38,7 @@
     height: auto;
     transform: scaleX(0.6);
     transform-origin: left;
+    letter-spacing: 3px;
 }
 
 .closeBtn {
@@ -48,6 +50,7 @@
     padding: 0;
     font-family: 'MD IO Trial';
     text-transform: uppercase;
+    transform: translate(29px,-9px);
 }
 
 .itemRow {
@@ -198,11 +201,12 @@
     font-size: 1em;
     font-family: 'MD IO Trial';
     text-transform: uppercase;
+    padding-top: 12px;
 }
 
 .radioOuter {
-    width: 36px;
-    height: 36px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     border: 2px solid grey;
     display: flex;
@@ -216,4 +220,12 @@
     border-radius: 50%;
     background-color: white;
     transition: opacity 0.2s;
+}
+
+.radioOuter:hover .radioInner {
+    opacity: 0.8;
+}
+
+.buttonContainer{
+    transform: translateX(27%);
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import { backgroundConfig } from '@/config/backgrounds';
 
 const GlobalBackground = () => {

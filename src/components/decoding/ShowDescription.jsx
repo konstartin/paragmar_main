@@ -14,11 +14,17 @@ export default function ShowDescription() {
   const part = (product.id?.split('//')[1] ?? product.id) || '';
   const idClean = `//${part.slice(0, -1)}`;
 
-  const TEXTS = [
-    `You were never built for comfort, you were built for fire. There’s a quiet storm inside you: calm on the outside, unstoppable at the core. You carry a natural instinct to rise, to protect, to push forward — even when it’s hard, even when no one sees.`,
-    `You feel deeply, but you don’t let it break you you let it shape you. Your strength doesn’t scream. It stands. 
-It holds. It lasts You lead not with volume but with presence and integrity, With unshakable inner truth.`,
-    `People may not always understand you, but they feel you. You are the one who keeps going when others stop. You don’t fear challenges — you become the force that answers them. you are powerful, unwavering, and profoundly alive.`
+//   const TEXTS = [
+//     `You were never built for comfort, you were built for fire. There’s a quiet storm inside you: calm on the outside, unstoppable at the core. You carry a natural instinct to rise, to protect, to push forward — even when it’s hard, even when no one sees.`,
+//     `You feel deeply, but you don’t let it break you you let it shape you. Your strength doesn’t scream. It stands. 
+// It holds. It lasts You lead not with volume but with presence and integrity, With unshakable inner truth.`,
+//     `People may not always understand you, but they feel you. You are the one who keeps going when others stop. You don’t fear challenges — you become the force that answers them. you are powerful, unwavering, and profoundly alive.`
+//   ];
+
+const TEXTS = [
+    product?.text1 || '', // Use text1 from product, fallback to empty string
+    product?.text2 || '', // Use text2 from product
+    product?.text3 || '', // Use text3 from product
   ];
 
   const PREFIX = '//';

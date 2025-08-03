@@ -16,7 +16,7 @@ const CompletePurchase = () => {
     return (
         <div className={styles.pageContainer}>
             
-                <ExtandHeader />
+                <ExtandHeader backPath ='/dressbuy' />
             
 
             <main className={styles.mainContent}>

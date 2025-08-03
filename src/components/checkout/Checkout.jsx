@@ -6,8 +6,9 @@ import visaIcon from '../../assets/icons/visa.png'; // Import visa icon
 import mastercardIcon from '../../assets/icons/mastercard.png'; // Import mastercard icon
 import CreditCardForm from './CreditCardForm';
 import MetaMaskForm from './MetaMaskForm';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import { getObjectData } from '@/config/objectsConfig';
+import SelectionButton from '../SelectionButton';
 
 const Checkout = ({
     itemTitle, // Keep as optional override
@@ -134,6 +135,7 @@ const Checkout = ({
                     cryptoSymbol={dynamicCryptoSymbol}
                     onChangeMethod={handleChangeMethod}
                 />
+                
             ) : (
                 <>
                     {/* Payment method selection label */}
@@ -167,6 +169,15 @@ const Checkout = ({
                         </div>
                     </div>
                 </>
+            )}
+            {(isCardFormVisible || isMetaMaskFormVisible) && (
+            <div className={styles.buttonContainer}>
+            <SelectionButton
+                className={styles.payButton}
+                text={isCardFormVisible ? `PAY $${dynamicPriceUSD}` : `PAY ${dynamicPriceCrypto} ${dynamicCryptoSymbol}`}
+                onClick={() => handleSelection(id, config.label)}
+            />
+            </div>
             )}
         </div>
     );

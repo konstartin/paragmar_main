@@ -4,8 +4,8 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    font-family: "Test Söhne Schmal";
+    gap: 40px;
+    font-family: "Test Sohne Schmal";
     position: relative;
     flex: 1;
 }
@@ -56,6 +56,7 @@
     cursor: pointer;
     padding: 0;
     transition: color 0.2s ease;
+    transform: translateX(-50px);
 }
 
 .changeButton:hover {

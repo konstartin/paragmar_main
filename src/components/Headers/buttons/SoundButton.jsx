@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SoundButton.module.css';
 import soundGif from '@/assets/questions/soundOn.gif';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 
 export default function SoundButton() {
     const { isSoundOn, setIsSoundOn } = useQuiz();

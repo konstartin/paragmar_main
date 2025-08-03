@@ -69,16 +69,6 @@ const MetaMaskForm = ({ amountETH = 0.014, cryptoSymbol = 'ETH', onPay, onChange
                     </div>
                 </div>
             </div>
-
-            <div>
-                {/* Pay button */}
-                <button
-                    className={styles.payButton}
-                    onClick={handleSubmit}
-                >
-                    PAY {amountETH}{cryptoSymbol}
-                </button>
-            </div>
         </div>
     );
 };

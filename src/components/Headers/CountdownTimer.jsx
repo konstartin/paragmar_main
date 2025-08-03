@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import styles from './CountdownTimer.module.css';
 
 export default function CountdownTimer() {

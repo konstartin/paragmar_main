@@ -2,7 +2,7 @@
 import React, { Suspense, useMemo, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF, useAnimations, Bounds } from '@react-three/drei';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import styles from './ProductViewer.module.css';
 
 function StaticModel({ url,scale }) {

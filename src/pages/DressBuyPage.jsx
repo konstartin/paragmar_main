@@ -8,7 +8,7 @@ import PurchaseActions from '@/components/dress-buy/PurchaseActions';
 import LooksGoodButton from '@/components/dress-buy/LooksGoodButton';
 import PriceDisplay from '@/components/dress-buy/PriceDisplay';
 import Checkout from '@/components/checkout/Checkout';
-import { useQuiz } from '@/context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import { getObjectData } from '@/config/objectsConfig';
 
 const DressBuyPage = () => {
@@ -48,7 +48,7 @@ const DressBuyPage = () => {
 
       {/* Header */}
       <header className={styles.headerArea}>
-        <ExtendHeader backPath='/dress'  />
+        {/* <ExtendHeader backPath='/dress'  /> */}
       </header>
 
       {/* Left text section*/}

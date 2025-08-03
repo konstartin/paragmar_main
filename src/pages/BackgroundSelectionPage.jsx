@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useQuiz } from '../context/QuizContext';
+import { useQuiz } from '@/context/useQuiz.js';
 import styles from './BackgroundSelectionPage.module.css';
 import SelectionButton from '../components/SelectionButton';
 import { backgroundConfig } from '../config/backgrounds';

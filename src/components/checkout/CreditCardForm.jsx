@@ -120,15 +120,6 @@ const CreditCardForm = ({ amountUSD = 38, onPay, onChangeMethod }) => {
                     </div>
                 </div>
             </div>
-
-            <div>
-                <button
-                    className={styles.payButton}
-                    onClick={handleSubmit}
-                >
-                    PAY {amountUSD}$
-                </button>
-            </div>
         </div>
     );
 };

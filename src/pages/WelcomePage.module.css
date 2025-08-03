@@ -15,7 +15,7 @@
 }
 
 .compositionContainer {
-  transform: translate(0%,-160%);
+  transform: translate(0%,-150%);
     position: relative;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
     height: 56px;
     margin-bottom: 2rem;
     opacity: 0;
-    transform: translate(0%, -340%);
+    transform: translate(0%, -280%);
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -69,7 +69,7 @@
     width: 550px;
     max-width: 90%;
     min-height: 120px;
-    transform: translate(11%, -150%);
+    transform: translate(11%, -120%);
 }
 
 

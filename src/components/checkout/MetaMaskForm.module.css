@@ -1,7 +1,7 @@
 /* MetaMaskForm.module.css */
 
 .metamaskFormWrapper {
-    margin-top: 20px;
+
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -31,6 +31,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 15px 15px 15px 35px;
 }
 
 /* Старый стиль для смайлика - убираем */
@@ -64,6 +65,7 @@
     cursor: pointer;
     padding: 0;
     transition: color 0.2s ease;
+    transform: translateX(-50px);
 }
 
 .changeButton:hover {

@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useQuiz } from '@/context/useQuiz.js';import { useNavigate } from 'react-router-dom';
 import styles from './ShowDescription.module.css';
+import SelectionButton from '../SelectionButton';
 
 export default function ShowDescription() {
   const { getProduct } = useQuiz();
@@ -68,14 +69,23 @@ const TEXTS = [
         {typed}
       </div>
 
-      <button
+      {/* <button
         className={`${styles.bottomButton} ${buttonEnabled ? styles.btnEnabled : styles.btnDisabled}`}
         onClick={handleButtonClick}
         disabled={!buttonEnabled}
       >
         REVEAL MY OUTFIT
-      </button>
+      </button> */}
 
+       <div className={styles.bottomButton}>
+            <SelectionButton
+                text=" REVEAL MY OUTFIT"
+                onClick={handleButtonClick}
+            />
+        </div>
+
+
+      {/* <SelectionButton/> */}
       <div className={styles.bottomRight}>
         YOUR PERSONALITY IS ONE OF MANY. <br />
         YOUR ALTER EGO IS A REFLECTION OF THE DEEPEST LAYERS YOUR SOUL.

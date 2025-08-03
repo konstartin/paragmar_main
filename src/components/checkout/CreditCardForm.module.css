@@ -1,7 +1,6 @@
 /* CreditCardForm.module.css */
 
 .cardFormWrapper {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -24,13 +23,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    
 }
 
 .methodInfo {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 0px 15px 10px 25px;
 }
 
 .visaIcon {

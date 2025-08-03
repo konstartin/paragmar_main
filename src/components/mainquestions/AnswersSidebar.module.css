@@ -1,13 +1,14 @@
-.sidebarContainer {
+
+ .sidebarContainer {
   box-sizing: border-box;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 417px;
-  padding: 13px 23px 20px 23px;
+  padding: 13px 0 20px 0;
   border-radius: 15px 15px 0px 0px;
-  background: #000;;
+  background: #000;
   border: 1px solid rgba(255, 255, 255, 0);
 }
 
@@ -32,6 +33,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 23px;
+  box-sizing: border-box;
 }
 
 .questionNumber {
@@ -57,31 +60,23 @@
 
 .answerItem:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.answerItem:hover {
-  cursor: pointer;
   background-color: black;
   background-image: linear-gradient(to right,
-   
-    white 0%, white 20%, transparent 0%,
-    transparent 21%,
-    white 21%, white 33%, transparent 0%,
-    transparent 34%,
-    white 34%, white 41%, transparent 0%,
-    transparent 42%,
-    white 42%, white 46%, transparent 0%,
-    transparent 47%,
-    white 47%, white 49%, transparent 0%,
-    transparent 50%,
-    transparent 10%,
+    white 0%, white 20%,
+    transparent 20%, transparent 21%,
+    white 21%, white 33%,
+    transparent 33%, transparent 34%,
+    white 34%, white 41%,
+    transparent 41%, transparent 42%,
+    white 42%, white 46%,
+    transparent 46%, transparent 47%,
+    white 47%, white 49%,
+    transparent 49%, transparent 50%,
     white 50%, white 100%
   );
 }
 
-
 .answerItem:hover .questionNumber,
 .answerItem:hover .answerLabel {
-  color: #000; 
+  color: #000;
 }

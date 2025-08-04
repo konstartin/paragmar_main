@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './FinalPage.module.css';
 import ExtendHeader from '@/components/Headers/ExtendHeader';
 import { getObjectData } from '../config/objectsConfig';
 
 export default function FinalPage() {
+    const navigate = useNavigate();
+
     // Get alter ego from quiz results - it's stored in 'finalProductKey'
     const selectedAlterEgo = localStorage.getItem('finalProductKey') || 'warrior';
 
@@ -29,7 +32,7 @@ export default function FinalPage() {
     useEffect(() => {
         const startTimer = setTimeout(() => {
             setIsTyping(true);
-        }, 1000); // 1 second delay before starting
+        }, 9000);
 
         return () => clearTimeout(startTimer);
     }, []);
@@ -51,6 +54,14 @@ export default function FinalPage() {
     // Format text for HTML display
     const formatText = (text) => {
         return text.replace(/\n/g, '<br>');
+    };
+
+
+    const handleVideoEnd = () => {
+        console.log('Video ended, redirecting in 2 seconds...');
+        setTimeout(() => {
+            navigate('/');
+        }, 2000);
     };
 
     // Handle video play - stop ALL audio on the site
@@ -142,12 +153,12 @@ export default function FinalPage() {
             <video
                 className={styles.videoBackground}
                 autoPlay
-                loop
                 playsInline
                 preload="auto"
                 controls={false}
                 style={{ pointerEvents: 'none' }}
                 onPlay={handleVideoPlay}
+                onEnded={handleVideoEnd}
                 onLoadedData={() => console.log('Video loaded successfully')}
                 onError={(e) => console.error('Video error:', e)}
             // Audio enabled - muted removed
@@ -165,7 +176,7 @@ export default function FinalPage() {
             <div className={styles.typingContainer}>
                 <div className={styles.typingText}>
                     <span dangerouslySetInnerHTML={{
-                        __html: formatText(displayedText) + `<span class="${styles.pulse}">|</span>`
+                        __html: formatText(displayedText) + (isTyping ? `<span class="${styles.pulse}">|</span>` : '')
                     }} />
                 </div>
             </div>

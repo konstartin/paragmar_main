@@ -13,7 +13,10 @@ export default function SoundButton() {
 
     return (
         <div className={styles.soundButtonContainer}>
-  <button onClick={toggleSound} className={styles.onButton}>
+  <button onClick={toggleSound} className={styles.onButton} style={isSoundOn 
+      ? {} 
+      : { transform: 'translateX(-5px)' }
+    }>
     
     {isSoundOn ? 'ON' : 'OFF'}
   </button>
@@ -24,7 +27,7 @@ export default function SoundButton() {
     
     style={isSoundOn 
       ? {} 
-      : { width: '50.842px',height: '24.629px',filter: 'grayscale(100%)', opacity: 0.6,marginLeft: '15px',transform: 'translateX(-5px)' }
+      : { width: '50.842px',height: '24.629px',filter: 'grayscale(100%)', opacity: 0.6 }
     }
   />
 </div>

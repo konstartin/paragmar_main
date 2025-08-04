@@ -31,7 +31,7 @@ const CompletePurchase = () => {
                 </div>
 
                 <p className={styles.description}>
-                    live your alter ego<br />on metaverse
+                    live your alter ego<br />on the metaverse
                 </p>
 
                 

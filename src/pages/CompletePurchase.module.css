@@ -19,7 +19,7 @@
   font-family: "Test Sohne Schmal";
   font-size: 80px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
   text-align: center;
@@ -48,7 +48,7 @@
 
 
 .description {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
   font-family: "MD IO Trial";
   font-size: 20px;

@@ -28,9 +28,9 @@
     
     color: #FFF;
     font-family: "Test Sohne Schmal";
-    font-size: 50px;
+    font-size: 60px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
     margin: 0;
@@ -63,9 +63,11 @@
     font-family: 'MD IO Trial';
     text-transform: uppercase;
     flex-shrink: 0;
+    font-size: 20px;
 }
 
 .itemTitle {
+    font-size: 20px;
     font-weight: 400;
     margin: 0;
     line-height: 1.4;
@@ -80,18 +82,21 @@
     font-family: 'MD IO Trial';
     text-transform: uppercase;
     transform: translateY(0.1em);
+    font-size: 20px;
 }
 
 .eth {
     font-weight: 400;
     font-size: 1em;
     line-height: 1.4;
+    font-size: 20px;
 }
 
 .usd {
     font-size: 0.9em;
     color: grey;
     line-height: 1.2;
+    font-size: 20px;
 }
 
 .separator {
@@ -108,6 +113,7 @@
     font-size: 1em;
     text-transform: uppercase;
     flex-shrink: 0;
+    font-size: 20px;
 }
 
 .totalLabel {
@@ -115,6 +121,7 @@
     font-weight: 600;
     margin: 0;
     line-height: 1.4;
+    font-size: 20px;
 }
 
 .paymentLabel {
@@ -124,6 +131,7 @@
     font-family: 'MD IO Trial';
     text-transform: uppercase;
     flex-shrink: 0;
+    font-size: 20px;
 }
 
 .paymentOption {
@@ -139,7 +147,9 @@
     transition: border 0.3s;
     font-family: 'MD IO Trial';
     text-transform: uppercase;
+    font-size: 20px;
     flex-shrink: 0;
+    
 }
 
 .selected {
@@ -233,5 +243,5 @@
 }
 
 .buttonContainer{
-    transform: translateX(27%);
+    transform: translate(27%,-50%);
 }

@@ -1,4 +1,3 @@
-
 import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './WelcomePage.module.css';
@@ -15,24 +14,10 @@ import FifthIcon   from '../assets/loadingpage/fift.svg';
 import SixthIcon   from '../assets/loadingpage/six.svg';
 import headphonesIcon from '../assets/loadingpage/headphones.svg';
 
-const ProgressBar = ({ onComplete }) => {
-  const progress = useProgressAnimation({ duration: 3000, onComplete });
-  return (
-    <>
-      <div className={styles.progressText}>
-        [{progress.toString().padStart(2, '0')}%]
-      </div>
-    </>
-  );
-};
-
-
-const LoadingView = ({ started, onStart, onProgressComplete }) => (
+// ───────── Loading screen ─────────
+const LoadingView = ({ progress }) => (
   <div className={styles.compositionContainer}>
-    <div
-      className={styles.mainTextContainer}
-      onMouseEnter={started ? undefined : onStart}   // ← מתחיל בריחוף
-    >
+    <div className={styles.mainTextContainer}>
       <img src={FirstIcon}  className={styles.firstIcon}  alt="[" />
       <img src={SecIcon}    className={styles.secIcon}    alt="0" />
       <img src={ThirdIcon}  className={styles.thirdIcon}  alt="1" />
@@ -42,17 +27,16 @@ const LoadingView = ({ started, onStart, onProgressComplete }) => (
     </div>
 
     <div className={styles.loadingText}>LOADING</div>
-
-    {started && <ProgressBar onComplete={onProgressComplete} />}
-
+    <div className={styles.progressText}>
+      [{progress.toString().padStart(2, '0')}%]
+    </div>
     <div className={styles.trademark}>TM</div>
   </div>
 );
 
-
+// ───────── Main component ─────────
 export default function WelcomePage() {
   const navigate = useNavigate();
-
 
   const FIRST_TEXT = `//YOU'RE ABOUT TO UNCOVER THE HIDDEN
 ALTER EGO THAT LIVES BENEATH YOUR
@@ -63,16 +47,13 @@ OUTFIT CRAFTED FROM ITS ESSENCE.`;
 SAFE. PUT ON YOUR HEADPHONES. BE
 HONEST AND LET YOUR INSTINCTS LEAD.`;
 
-  
-  const [started, setStarted] = useState(false);      // ← האם כבר ריחפו
-  const [currentScreen,    setCurrentScreen]    = useState('loading');
-  const [typingStage,      setTypingStage]      = useState(1);
-  const [textForTyping,    setTextForTyping]    = useState('');
+  const [currentScreen, setCurrentScreen]   = useState('loading');
+  const [typingStage,   setTypingStage]     = useState(1);
+  const [textForTyping, setTextForTyping]   = useState('');
   const [isHeadphonesVisible, setIsHeadphonesVisible] = useState(false);
   const [isHeadphonesPulsing, setIsHeadphonesPulsing] = useState(false);
   const [isTypingFinished,    setIsTypingFinished]    = useState(false);
 
-  /* Callbacks */
   const handleProgressComplete = useCallback(() => {
     setTimeout(() => {
       setCurrentScreen('typing');
@@ -96,21 +77,15 @@ HONEST AND LET YOUR INSTINCTS LEAD.`;
     }
   }, [typingStage]);
 
+  const progress  = useProgressAnimation({ duration: 3000, onComplete: handleProgressComplete });
   const typedText = useTypingAnimation({
     textToType: textForTyping,
     onComplete: handleTypingComplete,
   });
 
-  /* ──────────────────────────── */
   return (
     <div className={styles.loader}>
-      {currentScreen === 'loading' && (
-        <LoadingView
-          started={started}
-          onStart={() => setStarted(true)}
-          onProgressComplete={handleProgressComplete}
-        />
-      )}
+      {currentScreen === 'loading' && <LoadingView progress={progress} />}
 
       {currentScreen === 'typing' && (
         <>

@@ -11,7 +11,7 @@ export default function DecodingPage() {
   return (
     <div className={`${styles.pageContainer} ${selectedBackground}`}>
       <div className={styles.headerPlacement}>
-        <ExtendedHeader backPath="/question/12" />
+        <ExtendedHeader  />
       </div>
 
       <main className={styles.mainContent}>

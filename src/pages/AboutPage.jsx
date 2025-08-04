@@ -4,12 +4,6 @@ import { useLocation } from 'react-router-dom'
 import ExtendHeader from '@/components/Headers/ExtendHeader';
 import styles from './AboutPage.module.css';
 
-import FirstIcon from '../assets/loadingpage/first.svg';
-import SecIcon from '../assets/loadingpage/sec.svg';
-import ThirdIcon from '../assets/loadingpage/third.svg';
-import FourthIcon from '../assets/loadingpage/four.svg';
-import FifthIcon from '../assets/loadingpage/fift.svg';
-import SixthIcon from '../assets/loadingpage/six.svg';
 import logoIcon from '../assets/icons/logo.svg';
 
 export default function AboutPage() {

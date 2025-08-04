@@ -1,6 +1,6 @@
 import warriorStatic from '../assets/3dobjects/warrior_static.glb?url';
 import warriorDynamic from '../assets/3dobjects/warrior.glb?url';
-//import animalStatic from '@/assets/3dobjects/animal_static.glb';
+import animalStatic from '@/assets/3dobjects/animal_static.glb?url';
 import animalDynamic from '../assets/3dobjects/animal.glb?url';
 import caretakerStatic from '../assets/3dobjects/caretaker_static.glb?url';
 import caretakerDynamic from '../assets/3dobjects/caretaker.glb?url';
@@ -77,12 +77,12 @@ const objectsData = {
 
   animal: {
     title: 'The Animal',
-    clothingName: 'Animal Instinct', // Display name for clothing
+    clothingName: 'Animal Instinct', 
     id: '[animal//0590]',
     description: 'This garment was born from your choices. When worn by\n your avatar, it activates the qualities of The Animal: primal instincts, natural flow, and untamed spirit.',
     format: 'GLB, Animated',
     'technical specs': 'Polygons: 45,000, Textures: 2K PBR',
-    staticObjectUrl: warriorStatic, // Using warrior static as placeholder
+    staticObjectUrl: animalStatic, 
     dynamicObjectUrl: animalDynamic,
     finalVideo: animalVideo,
     text1 : 'You weren’t made to calculate you were made to feel. There’s a hunger in you that doesn’t wait for logic/permission.You sense people before they speak, read tension before it rises. You act from the gut — fast, raw, honest — without rehearsal.',

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './DressBuyPage.module.css';
+import { useNavigate } from 'react-router-dom';
 
 import ExtendHeader from '@/components/Headers/ExtendHeader';
 import ProductInfo from '@/components/dress-buy/ProductInfo';
@@ -13,9 +14,9 @@ import { getObjectData } from '@/config/objectsConfig';
 import layerHSvg from '@/assets/questions/Layer_H.svg';
 
 const DressBuyPage = () => {
-  const { selectedBackground, getProduct,setViewMode } = useQuiz();
+  const { getProduct,setViewMode,resetQuiz } = useQuiz();
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-
+  const navigate = useNavigate();
   const currentClothingData = getProduct();
 
   
@@ -39,7 +40,8 @@ const DressBuyPage = () => {
 
   // Handle "Start Over" button click
   const handleStartOverClick = () => {
-    console.log('Start Over clicked!');
+    resetQuiz();
+    navigate('/');
   };
 
   // Handle checkout close
@@ -77,7 +79,6 @@ const DressBuyPage = () => {
             priceETH={clothingInfo.priceETH}
             cryptoSymbol={clothingInfo.cryptoSymbol}
           />
-          <img src={layerHSvg} alt="Layer H" className={styles.separatorLine} />
           <LooksGoodButton
             onLooksGood={handleLooksGoodClick}
             onStartOver={handleStartOverClick}

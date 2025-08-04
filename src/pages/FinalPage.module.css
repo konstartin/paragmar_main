@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
 }
 
-/* Video background - С ВАШИМ z-index: 0 */
+/* Video background - with z-index: 0 */
 .videoBackground {
     position: fixed;
     top: 0;
@@ -22,35 +22,35 @@
     height: 100vh;
     object-fit: cover;
     z-index: 0;
-    /* ВАШЕ ИСПРАВЛЕНИЕ */
+    /* Behind all content */
 }
 
-/* Header area - ПОВЕРХ ВСЕГО */
+/* Header area - above everything */
 .headerArea {
     position: relative;
     z-index: 1000;
 }
 
-/* Typing container - ПОВЕРХ ВИДЕО */
+/* Typing container - above video */
 .typingContainer {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  width: 90%;
-  max-width: 1200px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    /* transform: translate(-50%, -50%); */
+
+    width: 90%;
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 100;
 }
 
-/* Typing text - КАК В WELCOMEPAGE */
+/* Typing text - same as in WelcomePage */
 .typingText {
     color: #FFF;
-    
+
     font-family: "MD IO Trial";
     font-size: 20px;
     font-style: normal;
@@ -65,7 +65,7 @@
     unicode-bidi: bidi-override;
 }
 
-/* Pulse animation - КАК В WELCOMEPAGE */
+/* Pulse animation - same as in WelcomePage */
 .pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

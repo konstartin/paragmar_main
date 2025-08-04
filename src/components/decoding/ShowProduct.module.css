@@ -10,7 +10,7 @@
    width: fit-content; 
     max-width: 90%; 
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -90%);
   display: flex;
@@ -40,13 +40,13 @@
   line-height: 0.95;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   white-space: nowrap;
 }
 
 .codeRow {
   width: 100%;
-  transform: translateY(-30px);
+  transform: translateY(-40px);
   display: flex;
   justify-content: space-between;
   color: #FFF;

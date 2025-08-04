@@ -1,28 +1,40 @@
 import { useState, useEffect } from 'react';
 import styles from './FinalPage.module.css';
 import ExtendHeader from '@/components/Headers/ExtendHeader';
-import { getFinalVideo } from '../config/objectsConfig';
+import { getObjectData } from '../config/objectsConfig';
 
 export default function FinalPage() {
-    const selectedAlterEgo = localStorage.getItem('selectedAlterEgo') || 'warrior';
-    const videoUrl = getFinalVideo(selectedAlterEgo);
+    // Get alter ego from quiz results - it's stored in 'finalProductKey'
+    const selectedAlterEgo = localStorage.getItem('finalProductKey') || 'warrior';
+
+    console.log('=== QUIZ RESULT DEBUG ===');
+    console.log('Final Product Key from localStorage:', selectedAlterEgo);
+    console.log('Quiz Answers:', localStorage.getItem('quizAnswers'));
+
+    // Get object data and extract video URL  
+    const objectData = getObjectData(selectedAlterEgo);
+    const videoUrl = objectData?.finalVideo;
+
+    // Fallback if no video found - try warrior
+    const fallbackVideoUrl = !videoUrl ? getObjectData('warrior')?.finalVideo : videoUrl;
+
     const fullText = "//YOU'VE ARRIVED, NOW ENJOY YOURSELF.\nREMEMBER, THERE'S NO ONE LIKE YOU";
 
-    // Состояния для анимации печати
+    // State variables for typing animation
     const [displayedText, setDisplayedText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTyping, setIsTyping] = useState(false);
 
-    // Запуск печати после загрузки компонента
+    // Start typing animation after component loads
     useEffect(() => {
         const startTimer = setTimeout(() => {
             setIsTyping(true);
-        }, 1000); // Задержка 1 секунда перед началом
+        }, 1000); // 1 second delay before starting
 
         return () => clearTimeout(startTimer);
     }, []);
 
-    // Анимация печати
+    // Typing animation logic
     useEffect(() => {
         if (!isTyping || currentIndex >= fullText.length) {
             return;
@@ -31,15 +43,98 @@ export default function FinalPage() {
         const typingTimer = setTimeout(() => {
             setDisplayedText(prev => prev + fullText[currentIndex]);
             setCurrentIndex(prev => prev + 1);
-        }, 80); // Скорость печати - 80ms между символами
+        }, 80); // Typing speed - 80ms between characters
 
         return () => clearTimeout(typingTimer);
     }, [currentIndex, isTyping, fullText]);
 
-    // Форматирование текста для HTML
+    // Format text for HTML display
     const formatText = (text) => {
         return text.replace(/\n/g, '<br>');
     };
+
+    // Handle video play - stop ALL audio on the site
+    const handleVideoPlay = (event) => {
+        console.log('Video started playing, stopping all site audio...');
+
+        // Stop all HTML audio elements
+        const allAudioElements = document.querySelectorAll('audio');
+        allAudioElements.forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0;
+            audio.volume = 0;
+            audio.muted = true;
+        });
+
+        // Stop Web Audio API contexts
+        if (window.AudioContext || window.webkitAudioContext) {
+            if (window.audioContext && window.audioContext.state === 'running') {
+                window.audioContext.suspend();
+            }
+        }
+
+        // Stop Tone.js if it's being used
+        if (window.Tone && window.Tone.Transport) {
+            window.Tone.Transport.stop();
+            window.Tone.Transport.cancel();
+        }
+
+        // Stop any Howler.js audio if it's being used
+        if (window.Howl) {
+            window.Howler.stop();
+            window.Howler.mute(true);
+        }
+
+        // Ensure video audio is enabled
+        const video = event.target;
+        video.muted = false;
+        video.volume = 0.8;
+
+        console.log(`Playing video for alter ego: ${selectedAlterEgo}`);
+    };
+
+    // Stop background audio when component mounts
+    useEffect(() => {
+        // Stop all site audio immediately when final page loads
+        const stopAllAudio = () => {
+            const allAudioElements = document.querySelectorAll('audio');
+            allAudioElements.forEach(audio => {
+                audio.pause();
+                audio.volume = 0;
+                audio.muted = true;
+            });
+
+            if (window.Howler) {
+                window.Howler.stop();
+            }
+        };
+
+        // Stop audio immediately and after a short delay
+        stopAllAudio();
+        setTimeout(stopAllAudio, 100);
+        setTimeout(stopAllAudio, 500);
+
+    }, []);
+
+    // Debug logging
+    useEffect(() => {
+        console.log('=== FINAL DEBUG INFO ===');
+        console.log('Selected Alter Ego (from quiz):', selectedAlterEgo);
+        console.log('Object Data:', objectData);
+        console.log('Video URL:', videoUrl);
+        console.log('Using video URL:', fallbackVideoUrl);
+
+        if (!objectData) {
+            console.error(`❌ No object data found for alter ego: ${selectedAlterEgo}`);
+        }
+
+        if (!videoUrl) {
+            console.error(`❌ No video found for alter ego: ${selectedAlterEgo}`);
+            console.log('📋 Available alter egos: eternal_child, warrior, animal, mask, ruler, void, rebel, diva, caretaker');
+        } else {
+            console.log(`✅ Successfully loaded video for ${selectedAlterEgo}`);
+        }
+    }, [selectedAlterEgo, objectData, videoUrl, fallbackVideoUrl]);
 
     return (
         <div className={styles.pageContainer}>
@@ -48,13 +143,17 @@ export default function FinalPage() {
                 className={styles.videoBackground}
                 autoPlay
                 loop
-                muted
                 playsInline
                 preload="auto"
                 controls={false}
                 style={{ pointerEvents: 'none' }}
+                onPlay={handleVideoPlay}
+                onLoadedData={() => console.log('Video loaded successfully')}
+                onError={(e) => console.error('Video error:', e)}
+            // Audio enabled - muted removed
             >
-                <source src={videoUrl} type="video/mp4" />
+                <source src={fallbackVideoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
             </video>
 
             {/* Header */}

@@ -62,9 +62,12 @@ export default function AnswerOptions({ questionIndex, onAnswer }) {
         
       </div>
 
-      <div className={styles.modelWrapper}>
-        <SplineScene config={config} />
-      </div>
+      <div
+  className={styles.modelWrapper}
+  style={questionIndex === 5 ? { transform: 'translate(-48%,-50%)' } : {}}
+>
+  <SplineScene config={config} />
+</div>
     </div>
   );
 }

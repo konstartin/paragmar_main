@@ -16,7 +16,6 @@ const PriceDisplay = ({
                 <span className={styles.ethPrice}>{priceETH}</span>
                 <img src={diamondSvg} alt="diamond" className={styles.diamondSvg} />
             </div>
-            {/* <img src={layerHSvg} alt="separator" className={styles.separatorLine} /> */}
         </div>
     );
 };

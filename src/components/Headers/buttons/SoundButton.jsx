@@ -13,14 +13,20 @@ export default function SoundButton() {
 
     return (
         <div className={styles.soundButtonContainer}>
-            <button onClick={toggleSound} className={styles.onButton}>
-                {isSoundOn ? 'ON' : 'OFF'}
-            </button>
-            <img
-                src={isSoundOn ? soundGif : soundOff}
-                alt={isSoundOn ? "Sound is on" : "Sound is off"} 
-                className={styles.soundGif}
-            />
-        </div>
+  <button onClick={toggleSound} className={styles.onButton}>
+    
+    {isSoundOn ? 'ON' : 'OFF'}
+  </button>
+  <img
+    src={isSoundOn ? soundGif : soundOff}
+    alt={isSoundOn ? "Sound is on" : "Sound is off"}
+    className={styles.soundGif}
+    
+    style={isSoundOn 
+      ? {} 
+      : { width: '50.842px',height: '24.629px',filter: 'grayscale(100%)', opacity: 0.6,marginLeft: '15px',transform: 'translateX(-5px)' }
+    }
+  />
+</div>
     );
 }

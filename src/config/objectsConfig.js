@@ -41,8 +41,8 @@ const objectsData = {
     staticObjectUrl: childStatic,
     dynamicObjectUrl: childDynamic,
     finalVideo: childVideo,
-    text1 : 'You were never here to grow up you were here to stay open. There’s a softness in you that resists the world’s hard edges. You feel everything — joy, pain, beauty as if it’s all brand new. ',
-    text2 :'You trust too quickly, laugh too loudly, love too easily — and you don’t regret it.  You’ve been told to “toughen up,” but you were never meant to close. You wonder. You absorb. You glow. You find meaning in small things others rush past.' ,
+    text1 : 'You were never here to grow up you were here to stay open. There’s a softness in you that resists the world’s hard edges. You feel everything joy, pain, beauty as if it’s all brand new. ',
+    text2 :'You trust too quickly, laugh too loudly, love too easily — and you don’t regret it.  You’ve been told to “toughen up” but you were never meant to close. You wonder. You absorb. You glow. You find meaning in small things others rush past.' ,
     text3 : 'People may dismiss you, but they return to you when they forget how to feel. You are not childish — you are timeless. You are hope that keeps choosing to exist. You are bright, brave, and endlessly alive.', 
     
     // Pricing information
@@ -85,9 +85,9 @@ const objectsData = {
     staticObjectUrl: animalStatic, 
     dynamicObjectUrl: animalDynamic,
     finalVideo: animalVideo,
-    text1 : 'You weren’t made to calculate you were made to feel. There’s a hunger in you that doesn’t wait for logic/permission.You sense people before they speak, read tension before it rises. You act from the gut — fast, raw, honest — without rehearsal.',
+    text1 : 'You weren’t made to calculate you were made to feel. There’s a hunger in you that doesn’t wait for logic/ permission. You sense people before they speak, read tension before it rises. You act from the gut — fast, raw, honest — without rehearsal.',
     text2 :'You’ve been judged for being “too much,” but you never apologize.You smell. You scan. You strike. You know when something’s off, even if no one else sees it.' ,
-    text3 : 'People may call you impulsive, but they miss your precision. You are instinct with memory, emotion with muscle. You don’t perform — you respond. You are untamed, electric, and frighteningly alive.', 
+    text3 : 'People may call you impulsive, but they miss your precision. You are instinct with memory, emotion with muscle. You don’t perform you respond. You are untamed, electric, and frighteningly alive.', 
    
     // Pricing information
     price: {

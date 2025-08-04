@@ -20,7 +20,7 @@ export default function AboutPage() {
       <ExtendHeader backPath={previousPath} />
       <div className={styles.content}>
         <div className={styles.compositionContainer}>
-            <img src={logoIcon} className={styles.logoIcon} alt="[" />
+            {/* <img src={logoIcon} className={styles.logoIcon} alt="[" /> */}
           </div>
         <p className={styles.text}>
           we are a futuristic fashion brand that brings your hidden alter ego to life. Through an immersive experience based on a Rorschach-inspired visual test, we generate a garment that’s entirely yours emotionally, energetically, and aesthetically. 

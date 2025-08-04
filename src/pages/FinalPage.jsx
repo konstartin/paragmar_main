@@ -32,7 +32,7 @@ export default function FinalPage() {
     useEffect(() => {
         const startTimer = setTimeout(() => {
             setIsTyping(true);
-        }, 9000);
+        }, 7000);
 
         return () => clearTimeout(startTimer);
     }, []);
@@ -46,7 +46,7 @@ export default function FinalPage() {
         const typingTimer = setTimeout(() => {
             setDisplayedText(prev => prev + fullText[currentIndex]);
             setCurrentIndex(prev => prev + 1);
-        }, 80); // Typing speed - 80ms between characters
+        }, 50); // Typing speed - 80ms between characters
 
         return () => clearTimeout(typingTimer);
     }, [currentIndex, isTyping, fullText]);
@@ -61,7 +61,7 @@ export default function FinalPage() {
         console.log('Video ended, redirecting in 2 seconds...');
         setTimeout(() => {
             navigate('/');
-        }, 2000);
+        }, 0);
     };
 
     // Handle video play - stop ALL audio on the site
